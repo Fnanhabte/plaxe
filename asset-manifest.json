@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/plaxe/static/css/main.6b2776c1.css",
-    "main.js": "/plaxe/static/js/main.2e822ac3.js",
+    "main.js": "/plaxe/static/js/main.2910fd3b.js",
     "static/js/787.28cb0dcd.chunk.js": "/plaxe/static/js/787.28cb0dcd.chunk.js",
     "static/media/plaxe-vaction.mp4": "/plaxe/static/media/plaxe-vaction.af0c0f12ec224ba19421.mp4",
     "static/media/pexels-anna-nekrashevich-6598884 (2160p).mp4": "/plaxe/static/media/pexels-anna-nekrashevich-6598884 (2160p).22df7d2152a9166ec04f.mp4",
@@ -43,11 +43,11 @@
     "static/media/MeriluxDemo-Regular-BF6487df3eeb5b4.otf": "/plaxe/static/media/MeriluxDemo-Regular-BF6487df3eeb5b4.fb232e793850e2ccd8a6.otf",
     "index.html": "/plaxe/index.html",
     "main.6b2776c1.css.map": "/plaxe/static/css/main.6b2776c1.css.map",
-    "main.2e822ac3.js.map": "/plaxe/static/js/main.2e822ac3.js.map",
+    "main.2910fd3b.js.map": "/plaxe/static/js/main.2910fd3b.js.map",
     "787.28cb0dcd.chunk.js.map": "/plaxe/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6b2776c1.css",
-    "static/js/main.2e822ac3.js"
+    "static/js/main.2910fd3b.js"
   ]
 }
