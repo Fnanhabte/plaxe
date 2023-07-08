@@ -1,0 +1,2415 @@
+@font-face {
+  font-family: Bloverly;
+  src: url(./fonts/bloverly.otf);
+}
+@font-face {
+  font-family: inc;
+  src: url(./fonts/MeriluxDemo-Regular-BF6487df3eeb5b4.otf);
+}
+@font-face {
+  font-family: sf;
+  src: url(./fonts/sf-compact-display-light.otf);
+}
+body {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  background: #cec6c6;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.interface {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  box-sizing: border-box;
+  background: #191818;
+}
+.interface > .intreface-container {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  flex-basis: 100%;
+  gap: 0.15rem;
+  flex-grow: 0;
+}
+.interface > .intreface-container .frame1 {
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  flex-basis: 35%;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+.interface > .intreface-container .frame1::-webkit-scrollbar {
+  display: none;
+}
+.interface > .intreface-container .frame1 > .framer-img {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+.interface > .intreface-container .frame1 > .framer-img > video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.interface > .intreface-container .frame1 > .framer-img > .scroll {
+  font: normal 200 11.3px Bloverly;
+  color: #b5b3b2;
+  text-transform: uppercase;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: translate(0, 100px);
+  letter-spacing: 8px;
+  top: 0;
+  animation: dim 30s linear infinite;
+}
+@keyframes dim {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 40;
+  }
+  60% {
+    opacity: 80;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.interface > .intreface-container .frame1 > .frame3,
+.interface > .intreface-container .frame1 .frame4,
+.interface > .intreface-container .frame1 .frame5,
+.interface > .intreface-container .frame1 .frame6, .interface > .intreface-container .frame1 .frame7, .interface > .intreface-container .frame1 .frame8, .interface > .intreface-container .frame1 .frame9, .interface > .intreface-container .frame1 .frame10 {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  z-index: 23;
+  margin-top: 10px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+.interface > .intreface-container .frame1 > .frame3 > .footer-note,
+.interface > .intreface-container .frame1 .frame4 > .footer-note,
+.interface > .intreface-container .frame1 .frame5 > .footer-note,
+.interface > .intreface-container .frame1 .frame6 > .footer-note, .interface > .intreface-container .frame1 .frame7 > .footer-note, .interface > .intreface-container .frame1 .frame8 > .footer-note, .interface > .intreface-container .frame1 .frame9 > .footer-note, .interface > .intreface-container .frame1 .frame10 > .footer-note {
+  width: 100%;
+  height: 100vh;
+  background: #cec6c6;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0.3rem;
+  flex-grow: 0;
+  align-items: center;
+}
+.interface > .intreface-container .frame1 > .frame3 > .footer-note > P,
+.interface > .intreface-container .frame1 .frame4 > .footer-note > P,
+.interface > .intreface-container .frame1 .frame5 > .footer-note > P,
+.interface > .intreface-container .frame1 .frame6 > .footer-note > P, .interface > .intreface-container .frame1 .frame7 > .footer-note > P, .interface > .intreface-container .frame1 .frame8 > .footer-note > P, .interface > .intreface-container .frame1 .frame9 > .footer-note > P, .interface > .intreface-container .frame1 .frame10 > .footer-note > P {
+  font: normal 200 12.8px Bloverly;
+  color: #1d1d1d;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.interface > .intreface-container .frame1 > .frame3 > .footer-note > P:hover,
+.interface > .intreface-container .frame1 .frame4 > .footer-note > P:hover,
+.interface > .intreface-container .frame1 .frame5 > .footer-note > P:hover,
+.interface > .intreface-container .frame1 .frame6 > .footer-note > P:hover, .interface > .intreface-container .frame1 .frame7 > .footer-note > P:hover, .interface > .intreface-container .frame1 .frame8 > .footer-note > P:hover, .interface > .intreface-container .frame1 .frame9 > .footer-note > P:hover, .interface > .intreface-container .frame1 .frame10 > .footer-note > P:hover {
+  color: #996704;
+  transition: all 0.4s linear;
+}
+.interface > .intreface-container .frame1 > .frame3 > img,
+.interface > .intreface-container .frame1 .frame4 > img,
+.interface > .intreface-container .frame1 .frame5 > img,
+.interface > .intreface-container .frame1 .frame6 > img, .interface > .intreface-container .frame1 .frame7 > img, .interface > .intreface-container .frame1 .frame8 > img, .interface > .intreface-container .frame1 .frame9 > img, .interface > .intreface-container .frame1 .frame10 > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.interface > .intreface-container .frame2 {
+  flex-basis: 64.8%;
+  background: #1b1a1a;
+}
+.interface > .intreface-container .frame2 > .framer-img {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.interface > .intreface-container .frame2 > .framer-img > img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 101%;
+  z-index: 2;
+}
+.interface > .intreface-container .frame2 > .framer-img .inner-design {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 333;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0.3rem;
+  flex-grow: 0;
+}
+.interface > .intreface-container .frame2 > .framer-img .inner-design > .booking {
+  flex-basis: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  flex-basis: 100%;
+  gap: 0.3rem;
+  flex-grow: 0;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+.interface > .intreface-container .frame2 > .framer-img .inner-design > .booking > .menu-box {
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+.interface > .intreface-container .frame2 > .framer-img .inner-design > .booking > .menu-box .menu-wrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0.3rem;
+  flex-grow: 0;
+  align-items: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.interface > .intreface-container .frame2 > .framer-img .inner-design > .booking > .menu-box .menu-wrapper > .arrow {
+  display: block;
+  width: 90px;
+  height: 2px;
+  background: #a4a4a4;
+}
+.interface > .intreface-container .frame2 > .framer-img .inner-design > .booking .booking-wrapper {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  flex-basis: 170px;
+  gap: 0.3rem;
+  flex-grow: 0;
+  align-items: center;
+  background: #3A4D2C;
+  border-radius: 500px;
+}
+.interface > .intreface-container .frame2 > .framer-img .inner-design > .booking .booking-wrapper > h3 {
+  margin: 0;
+}
+.interface > .intreface-container .frame2 > .framer-img .inner-design > .booking .booking-wrapper > h3 > a {
+  text-decoration: none;
+  text-align: center;
+  font: normal 200 18px Bloverly;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #afaeae;
+}
+.interface > .intreface-container .frame2 > .framer-img .inner-design > .booking .booking-wrapper:hover > h3 > a {
+  color: rgb(200, 131, 4);
+  transition: all 0.4s linear;
+}
+.interface > .intreface-container .frame2 > .framer-img .inner-design > .brand-logo {
+  flex-basis: 100%;
+}
+.interface > .intreface-container .frame2 > .framer-img .inner-design > .brand-logo > .logo {
+  background: url(./images/PLAXE-LOGO.png) no-repeat center center/contain border-box;
+  transform: translate(0, 70px);
+  padding: 11rem;
+  box-sizing: border-box;
+}
+.interface > .intreface-container .frame2 > .framer-img .inner-design > .footer {
+  flex-basis: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  flex-basis: 100%;
+  gap: 2rem;
+  flex-grow: 0;
+  padding: 0 2rem;
+  -webkit-padding-end: 3.5rem;
+          padding-inline-end: 3.5rem;
+}
+.interface > .intreface-container .frame2 > .framer-img .inner-design > .footer > p {
+  font: normal 200 12.8px Bloverly;
+  color: #b5b3b2;
+  text-transform: uppercase;
+}
+
+.menu-dropdown {
+  display: none;
+}
+
+.show {
+  width: 100%;
+  height: 100vh;
+  background: #967440;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.show::-webkit-scrollbar {
+  display: none;
+}
+.show > .menu-wrapper {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  flex-basis: 100%;
+  gap: 0.3rem;
+  flex-grow: 0;
+}
+.show > .menu-wrapper > .menu-header {
+  flex-basis: 100%;
+  width: 100%;
+  height: 80px;
+}
+.show > .menu-wrapper > .menu-header > .cancel-menu {
+  width: 150px;
+  height: 60px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0.3rem;
+  flex-grow: 0;
+  padding-left: 3rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 888;
+  cursor: pointer;
+}
+.show > .menu-wrapper > .menu-header > .cancel-menu > .exit {
+  display: block;
+  width: 60px;
+  height: 2.5px;
+  background: #212121;
+}
+.show > .menu-wrapper > .menu-header > .cancel-menu .left {
+  transform: rotate(45deg);
+}
+.show > .menu-wrapper > .menu-header > .cancel-menu .right {
+  transform: rotate(-45deg);
+}
+.show > .menu-wrapper > .menu-header > .cancel-menu:hover > .exit {
+  background: #6b2102;
+  transition: all 0.3s linear;
+}
+.show > .menu-wrapper > .menu-header .plaxe-logo {
+  background: url(./images/plaxe-blackLogo.png) no-repeat center center/contain border-box;
+  transform: translate(0, -70px);
+  padding: 2.5rem;
+  box-sizing: border-box;
+}
+.show > .menu-wrapper .menu-nav {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 7rem;
+  flex-basis: 100%;
+  box-sizing: border-box;
+  background: #967440;
+}
+.show > .menu-wrapper .menu-nav > h1 {
+  margin: 0;
+  font: normal 200 3.5rem bloverly;
+  cursor: pointer;
+  padding: 15px;
+  color: #b5b3b2;
+}
+.show > .menu-wrapper .menu-nav > h1:hover {
+  color: #272625;
+  transition: all 0.3s linear;
+}
+.show > .menu-wrapper .menu-footer {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.show > .menu-wrapper .menu-footer > .INFO {
+  margin: 0;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  flex-basis: 100%;
+  gap: 0.3rem;
+  flex-grow: 0;
+  width: 100%;
+  height: 50px;
+}
+.show > .menu-wrapper .menu-footer > .INFO > li {
+  list-style: none;
+  font: normal 200 14.8px Bloverly;
+  color: #191816;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.show > .menu-wrapper .menu-footer > .INFO > li:hover {
+  color: #b5b3b2;
+  transition: all 0.2s linear;
+  -webkit-text-decoration: underline 1.6px;
+          text-decoration: underline 1.6px;
+  text-underline-offset: 4.6px;
+}
+.show > .menu-wrapper .menu-footer .policy {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0.3rem;
+  flex-grow: 0;
+  align-items: flex-end;
+  width: 100%;
+  height: 70px;
+  margin: 0;
+}
+.show > .menu-wrapper .menu-footer .policy > li {
+  list-style: none;
+  font: normal 200 13.3px Bloverly;
+  color: #191816;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.reservation {
+  width: 100%;
+  height: 100vh;
+  background: #201f1f;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+.reservation > .res-wrapper {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  background: #201f1f;
+  box-sizing: border-box;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+}
+.reservation > .res-wrapper > img {
+  top: 0;
+  position: absolute;
+  z-index: 3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.reservation > .res-wrapper > .booking-section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  flex-basis: 100%;
+  gap: 0.3rem;
+  flex-grow: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to top, rgba(131, 129, 129, 0.2549019608), rgba(0, 0, 0, 0), #000);
+  position: relative;
+  z-index: 4444;
+}
+.reservation > .res-wrapper > .booking-section .res-menu {
+  flex-basis: 100%;
+  position: relative;
+  z-index: 4444;
+}
+.reservation > .res-wrapper > .booking-section .res-menu > li {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  flex-basis: 100%;
+  gap: 0.3rem;
+  flex-grow: 0;
+  align-items: flex-end;
+  padding: 0rem 2rem;
+}
+.reservation > .res-wrapper > .booking-section .res-menu > li > p {
+  flex-basis: 100%;
+  width: 110px;
+  height: 20px;
+  line-height: 1.3em;
+  font-family: sf;
+  text-align: center;
+  color: #838180;
+}
+.reservation > .res-wrapper > .booking-section > .res-menu > .menu-bar {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  flex-basis: 100%;
+  gap: 0.3rem;
+  flex-grow: 0;
+  align-items: flex-end;
+  padding: 0.5rem 3.5rem;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.reservation > .res-wrapper > .booking-section > .res-menu > .menu-bar > .arrow {
+  display: block;
+  width: 65px;
+  height: 2px;
+  background: #ffffff;
+}
+.reservation > .res-wrapper > .booking-section > .booking-info {
+  flex-basis: 100%;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  flex-basis: 100%;
+  gap: 0.3rem;
+  flex-grow: 0;
+  padding: 1.5rem 3rem;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+.reservation > .res-wrapper > .booking-section > ul > li {
+  list-style: none;
+  cursor: pointer;
+  list-style: none;
+  font: normal 200 15px sf;
+  color: #7d7d7d;
+  position: relative;
+}
+.reservation > .res-wrapper > .booking-section > ul > li .selector::after {
+  content: "";
+  position: absolute;
+  transform: translate(13px, -5px);
+  background: url(./icon/iconmonstr-caret-down-filled-240-grey.png) no-repeat center center/contain border-box;
+  padding: 0.8rem;
+  cursor: pointer;
+}
+.reservation > .res-wrapper > .booking-section > ul > li > .book-now {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  flex-basis: 170px;
+  gap: 0.3rem;
+  flex-grow: 0;
+  align-items: center;
+  background: #3A4D2C;
+  border-radius: 500px;
+}
+.reservation > .res-wrapper > .booking-section > ul > li > .book-now > h3 {
+  text-align: center;
+  font: normal 200 18px Bloverly;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #afaeae;
+}
+.reservation > .res-wrapper > .booking-section > ul > li > small {
+  display: block;
+  text-align: center;
+  padding-top: 1rem;
+}
+.reservation > .res-wrapper > .booking-section .side-quote li > p {
+  flex-basis: 100%;
+  width: 110px;
+  height: 20px;
+  line-height: 1.3em;
+  font-family: sf;
+  text-align: center;
+}
+.reservation .reservation-section2,
+.reservation .reservation-section3,
+.reservation .reservation-section4,
+.reservation .reservation-section5,
+.reservation .reservation-section6,
+.reservation .reservation-section7,
+.reservation .reservation-section8 {
+  width: 100%;
+  height: 100vh;
+  background: #201f1f;
+  position: relative;
+  z-index: 444;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+.reservation .reservation-section2 > .section2-wrapper,
+.reservation .reservation-section3 > .section2-wrapper,
+.reservation .reservation-section4 > .section2-wrapper,
+.reservation .reservation-section5 > .section2-wrapper,
+.reservation .reservation-section6 > .section2-wrapper,
+.reservation .reservation-section7 > .section2-wrapper,
+.reservation .reservation-section8 > .section2-wrapper {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  flex-basis: 100%;
+  gap: 0.2rem;
+  flex-grow: 0;
+}
+.reservation .reservation-section2 > .section2-wrapper > .image-container,
+.reservation .reservation-section3 > .section2-wrapper > .image-container,
+.reservation .reservation-section4 > .section2-wrapper > .image-container,
+.reservation .reservation-section5 > .section2-wrapper > .image-container,
+.reservation .reservation-section6 > .section2-wrapper > .image-container,
+.reservation .reservation-section7 > .section2-wrapper > .image-container,
+.reservation .reservation-section8 > .section2-wrapper > .image-container {
+  flex-basis: 70%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  flex-basis: 70%;
+  gap: 0rem;
+  flex-grow: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+.reservation .reservation-section2 > .section2-wrapper > .image-container::-webkit-scrollbar,
+.reservation .reservation-section3 > .section2-wrapper > .image-container::-webkit-scrollbar,
+.reservation .reservation-section4 > .section2-wrapper > .image-container::-webkit-scrollbar,
+.reservation .reservation-section5 > .section2-wrapper > .image-container::-webkit-scrollbar,
+.reservation .reservation-section6 > .section2-wrapper > .image-container::-webkit-scrollbar,
+.reservation .reservation-section7 > .section2-wrapper > .image-container::-webkit-scrollbar,
+.reservation .reservation-section8 > .section2-wrapper > .image-container::-webkit-scrollbar {
+  display: none;
+}
+.reservation .reservation-section2 > .section2-wrapper > .image-container .col1,
+.reservation .reservation-section3 > .section2-wrapper > .image-container .col1,
+.reservation .reservation-section4 > .section2-wrapper > .image-container .col1,
+.reservation .reservation-section5 > .section2-wrapper > .image-container .col1,
+.reservation .reservation-section6 > .section2-wrapper > .image-container .col1,
+.reservation .reservation-section7 > .section2-wrapper > .image-container .col1,
+.reservation .reservation-section8 > .section2-wrapper > .image-container .col1 {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  flex-basis: 100%;
+  gap: 0.4rem;
+  flex-grow: 0;
+  background: #201f1f;
+}
+.reservation .reservation-section2 > .section2-wrapper > .image-container .col1 > img,
+.reservation .reservation-section3 > .section2-wrapper > .image-container .col1 > img,
+.reservation .reservation-section4 > .section2-wrapper > .image-container .col1 > img,
+.reservation .reservation-section5 > .section2-wrapper > .image-container .col1 > img,
+.reservation .reservation-section6 > .section2-wrapper > .image-container .col1 > img,
+.reservation .reservation-section7 > .section2-wrapper > .image-container .col1 > img,
+.reservation .reservation-section8 > .section2-wrapper > .image-container .col1 > img {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.reservation .reservation-section2 > .section2-wrapper > .info-container,
+.reservation .reservation-section3 > .section2-wrapper > .info-container,
+.reservation .reservation-section4 > .section2-wrapper > .info-container,
+.reservation .reservation-section5 > .section2-wrapper > .info-container,
+.reservation .reservation-section6 > .section2-wrapper > .info-container,
+.reservation .reservation-section7 > .section2-wrapper > .info-container,
+.reservation .reservation-section8 > .section2-wrapper > .info-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+  padding: 1rem 0;
+  width: 100%;
+  height: 95vh;
+  align-items: center;
+  flex-basis: 29.7%;
+}
+.reservation .reservation-section2 > .section2-wrapper > .info-container > .room-info,
+.reservation .reservation-section3 > .section2-wrapper > .info-container > .room-info,
+.reservation .reservation-section4 > .section2-wrapper > .info-container > .room-info,
+.reservation .reservation-section5 > .section2-wrapper > .info-container > .room-info,
+.reservation .reservation-section6 > .section2-wrapper > .info-container > .room-info,
+.reservation .reservation-section7 > .section2-wrapper > .info-container > .room-info,
+.reservation .reservation-section8 > .section2-wrapper > .info-container > .room-info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+  align-items: center;
+  padding: 4rem 0;
+  height: 60vh;
+  position: relative;
+  z-index: 77;
+}
+.reservation .reservation-section2 > .section2-wrapper > .info-container > .room-info > p,
+.reservation .reservation-section3 > .section2-wrapper > .info-container > .room-info > p,
+.reservation .reservation-section4 > .section2-wrapper > .info-container > .room-info > p,
+.reservation .reservation-section5 > .section2-wrapper > .info-container > .room-info > p,
+.reservation .reservation-section6 > .section2-wrapper > .info-container > .room-info > p,
+.reservation .reservation-section7 > .section2-wrapper > .info-container > .room-info > p,
+.reservation .reservation-section8 > .section2-wrapper > .info-container > .room-info > p {
+  width: 350px;
+  height: 100px;
+  line-height: 1.7em;
+  font-family: sf;
+  font-weight: 100;
+  font-size: 14.5px;
+  font-style: italic;
+  text-align: center;
+  color: #838180;
+}
+.reservation .reservation-section2 > .section2-wrapper > .info-container .view-all,
+.reservation .reservation-section3 > .section2-wrapper > .info-container .view-all,
+.reservation .reservation-section4 > .section2-wrapper > .info-container .view-all,
+.reservation .reservation-section5 > .section2-wrapper > .info-container .view-all,
+.reservation .reservation-section6 > .section2-wrapper > .info-container .view-all,
+.reservation .reservation-section7 > .section2-wrapper > .info-container .view-all,
+.reservation .reservation-section8 > .section2-wrapper > .info-container .view-all {
+  flex-basis: 100%;
+  height: 0vh;
+  position: relative;
+  z-index: 77;
+}
+.reservation .reservation-section2 > .section2-wrapper > .info-container .view-all > p,
+.reservation .reservation-section3 > .section2-wrapper > .info-container .view-all > p,
+.reservation .reservation-section4 > .section2-wrapper > .info-container .view-all > p,
+.reservation .reservation-section5 > .section2-wrapper > .info-container .view-all > p,
+.reservation .reservation-section6 > .section2-wrapper > .info-container .view-all > p,
+.reservation .reservation-section7 > .section2-wrapper > .info-container .view-all > p,
+.reservation .reservation-section8 > .section2-wrapper > .info-container .view-all > p {
+  line-height: 1.3em;
+  font-family: sf;
+  font-size: 13.8px;
+  text-align: center;
+  color: #838180;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.reservation .reservation-section2 > .section2-wrapper > .info-container .view-all > p:hover,
+.reservation .reservation-section3 > .section2-wrapper > .info-container .view-all > p:hover,
+.reservation .reservation-section4 > .section2-wrapper > .info-container .view-all > p:hover,
+.reservation .reservation-section5 > .section2-wrapper > .info-container .view-all > p:hover,
+.reservation .reservation-section6 > .section2-wrapper > .info-container .view-all > p:hover,
+.reservation .reservation-section7 > .section2-wrapper > .info-container .view-all > p:hover,
+.reservation .reservation-section8 > .section2-wrapper > .info-container .view-all > p:hover {
+  color: #ac4a03;
+  transition: all 0.2s linear;
+}
+.reservation .reservation-section5 {
+  background: #d3d5d5;
+  width: 100%;
+  height: 100vh;
+}
+.reservation .reservation-section5 > .section2-wrapper {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0.2rem;
+  flex-grow: 0;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+  padding: 1rem 0;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  flex-basis: 100%;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container > .room-info {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+  align-items: center;
+  padding: 4rem 0;
+  height: 60vh;
+  position: relative;
+  z-index: 77;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container > .room-info > h2 {
+  font-size: 1.5rem;
+  font-family: bloverly;
+  font-style: italic;
+  text-align: center;
+  text-transform: uppercase;
+  color: #525151;
+  font-weight: 100;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-text {
+  flex-basis: 100%;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+  padding: 0 10rem;
+  width: 30%;
+  height: 50vh;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper > p {
+  width: 450px;
+  height: 100px;
+  line-height: 1.7em;
+  font-family: sf;
+  font-size: 14.6px;
+  color: #838180;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-text-footer {
+  flex-basis: 100%;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+  padding: 0 10rem;
+  align-items: center;
+  width: 30%;
+  height: 50vh;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper > p {
+  width: 450px;
+  height: 100px;
+  line-height: 1.7em;
+  font-family: sf;
+  font-size: 14.6px;
+  color: #838180;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  flex-basis: 100%;
+  gap: 4rem;
+  flex-grow: 0;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-container > .col2,
+.reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-container .col3 {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  flex-basis: 100%;
+  gap: 0.4rem;
+  flex-grow: 0;
+  width: 50%;
+  height: 100vh;
+  background: #201f1f;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-container > .col2 > video,
+.reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-container .col3 > video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-container-bottom {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-container-bottom > .col4 {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  flex-basis: 65%;
+  gap: 0.4rem;
+  flex-grow: 0;
+  width: 100%;
+  height: 100vh;
+  background: #201f1f;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-container-bottom > .col4 p {
+  flex-basis: 100%;
+  line-height: 1.3em;
+  font-family: sf;
+  font-size: 13.7px;
+  color: #838180;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-container-bottom > .col4 > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container .view-all {
+  flex-basis: 100%;
+  height: 0vh;
+  position: relative;
+  z-index: 77;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container .view-all > p {
+  line-height: 1.3em;
+  font-family: sf;
+  font-size: 13.8px;
+  text-align: center;
+  color: #838180;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.reservation .reservation-section5 > .section2-wrapper > .info-container .view-all > p:hover {
+  color: #ac4a03;
+  transition: all 0.2s linear;
+}
+.reservation .reservation-section6 {
+  background: #d3d5d5;
+  width: 100%;
+  height: 100vh;
+}
+.reservation .reservation-section6 > .section2-wrapper {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0.2rem;
+  flex-grow: 0;
+}
+.reservation .reservation-section6 > .section2-wrapper > .info-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  flex-basis: 100%;
+  padding: 0;
+}
+.reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-text-footer {
+  flex-basis: 100%;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+  position: absolute;
+}
+.reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+  padding: 0rem 2rem;
+  align-items: flex-start;
+  width: 30%;
+  height: 80vh;
+}
+.reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper > p {
+  width: 450px;
+  height: 150px;
+  line-height: 1.7em;
+  font-family: sf;
+  font-size: 14.6px;
+  color: #d7d0be;
+  background: rgba(36, 35, 32, 0.3294117647);
+  -webkit-backdrop-filter: blur(4rem);
+  backdrop-filter: blur(4rem);
+  border-radius: 6px;
+  padding: 3.3rem;
+}
+.reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  flex-basis: 100%;
+  gap: 4rem;
+  flex-grow: 0;
+}
+.reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-container > .col2 {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  flex-basis: 100%;
+  gap: 0.4rem;
+  flex-grow: 0;
+  width: 100%;
+  height: 100vh;
+  background: #201f1f;
+}
+.reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-container > .col2 > video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.reservation .reservation-section7 {
+  width: 100%;
+  height: 100vh;
+}
+.reservation .reservation-section7 > .section2-wrapper {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0.2rem;
+  flex-grow: 0;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+  padding: 1rem 0;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  flex-basis: 100%;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container > .room-info {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  flex-basis: 50%;
+  gap: 0rem;
+  flex-grow: 0;
+  align-items: center;
+  padding: 4rem 0;
+  height: 60vh;
+  position: relative;
+  z-index: 77;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container > .room-info > h2 {
+  font-size: 2rem;
+  font-family: bloverly;
+  line-height: 1.4em;
+  font-style: italic;
+  text-align: center;
+  text-transform: uppercase;
+  color: #978764;
+  font-weight: 100;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-text {
+  flex-basis: 100%;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+  padding: 4rem 10rem;
+  width: 30%;
+  height: 50vh;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper > .join-now {
+  width: 350px;
+  height: 50px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  flex-basis: 400px;
+  gap: 0.3rem;
+  flex-grow: 0;
+  align-items: center;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper > .join-now > p {
+  text-align: center;
+  font: normal 200 13.3px sf;
+  cursor: pointer;
+  color: #978764;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper > .join-now > p:hover {
+  color: #3A4D2C;
+  transition: all 0.3s linear;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper > p {
+  width: 450px;
+  height: 100px;
+  line-height: 1.7em;
+  font-family: sf;
+  font-size: 14.6px;
+  color: #838180;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .menu-footer {
+  width: 50%;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .menu-footer > .INFO {
+  margin: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  flex-basis: 30%;
+  gap: 1.1rem;
+  flex-grow: 0;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .menu-footer > .INFO > li {
+  list-style: none;
+  font-family: Bloverly;
+  font-size: 14.6px;
+  color: #838180;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 100;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .menu-footer > .INFO > li:hover {
+  color: #edeceb;
+  transition: all 0.2s linear;
+  -webkit-text-decoration: underline 1.6px;
+          text-decoration: underline 1.6px;
+  text-underline-offset: 4.6px;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .menu-footer .policy {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0.3rem;
+  flex-grow: 0;
+  align-items: flex-end;
+  width: 100%;
+  height: 70px;
+  margin: 0;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .menu-footer .policy > li {
+  list-style: none;
+  font-family: Bloverly;
+  font-size: 13.6px;
+  color: #838180;
+  text-transform: uppercase;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 100;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-text-footer {
+  flex-basis: 100%;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  flex-basis: 50%;
+  gap: 0rem;
+  flex-grow: 0;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+  padding: 0 10rem;
+  align-items: center;
+  width: 30%;
+  height: 50vh;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper > p {
+  width: 450px;
+  height: 50px;
+  line-height: 1.7em;
+  font-family: sf;
+  font-size: 14.6px;
+  color: #838180;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper .book {
+  flex-basis: 25%;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  cursor: pointer;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper .book:hover {
+  color: #5a853c;
+  transition: all 0.3s linear;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-container {
+  background: darkcyan;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  flex-basis: 100%;
+  gap: 4rem;
+  flex-grow: 0;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-container > .col2,
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-container .col3 {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  flex-basis: 100%;
+  gap: 0.4rem;
+  flex-grow: 0;
+  width: 50%;
+  height: 100vh;
+  background: #201f1f;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-container > .col2 > video,
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-container .col3 > video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-container-bottom {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-container-bottom > .col4 {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  flex-basis: 65%;
+  gap: 0.4rem;
+  flex-grow: 0;
+  width: 100%;
+  height: 100vh;
+  background: #201f1f;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-container-bottom > .col4 p {
+  flex-basis: 100%;
+  line-height: 1.3em;
+  font-family: sf;
+  font-size: 13.7px;
+  color: #838180;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-container-bottom > .col4 > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .view-all {
+  flex-basis: 100%;
+  height: 0vh;
+  position: relative;
+  z-index: 77;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .view-all > p {
+  line-height: 1.3em;
+  font-family: sf;
+  font-size: 13.8px;
+  text-align: center;
+  color: #838180;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.reservation .reservation-section7 > .section2-wrapper > .info-container .view-all > p:hover {
+  color: #ac4a03;
+  transition: all 0.2s linear;
+}
+.reservation .reservation-section8 {
+  width: 100%;
+  height: 100vh;
+}
+.reservation .reservation-section8 > .section2-wrapper {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0.2rem;
+  flex-grow: 0;
+}
+.reservation .reservation-section8 > .section2-wrapper > .info-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+  padding: 1rem 0;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  flex-basis: 100%;
+}
+.reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer {
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0rem;
+  box-sizing: border-box;
+}
+.reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer > .INFO {
+  margin: 0;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 1.4rem;
+  flex-grow: 0;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0;
+}
+.reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer > .INFO > li {
+  list-style: none;
+  font-family: Bloverly;
+  font-size: 14px;
+  color: #838180;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 100;
+}
+.reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer > .INFO > li:hover {
+  color: #edeceb;
+  transition: all 0.2s linear;
+  -webkit-text-decoration: underline 1.6px;
+          text-decoration: underline 1.6px;
+  text-underline-offset: 4.6px;
+}
+.reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer .policy {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0.3rem;
+  flex-grow: 0;
+  align-items: flex-end;
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  padding: 0;
+}
+.reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer .policy > li {
+  list-style: none;
+  font-family: Bloverly;
+  font-size: 13.2px;
+  color: #838180;
+  text-transform: uppercase;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 100;
+}
+.reservation .reservation-section8 > .section2-wrapper > .info-container .alcemy-text-footer {
+  flex-basis: 100%;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  flex-basis: 50%;
+  gap: 0rem;
+  flex-grow: 0;
+}
+.reservation .reservation-section8 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  flex-basis: 100%;
+  gap: 0rem;
+  flex-grow: 0;
+  padding: 0 0rem;
+  align-items: center;
+  width: 100%;
+  height: 28vh;
+}
+.reservation .reservation-section8 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper > p {
+  width: 470px;
+  height: 50px;
+  line-height: 1.7em;
+  font-family: sf;
+  font-size: 14.6px;
+  color: #838180;
+}
+.reservation .reservation-section8 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper .book {
+  flex-basis: 100%;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  cursor: pointer;
+}
+.reservation .reservation-section8 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper .book:hover {
+  color: #3A4D2C;
+  transition: all 0.3s linear;
+}
+
+@media all and (max-width: 1350px) and (min-width: 501px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  body .interface > .intreface-container {
+    position: relative;
+  }
+  body .interface > .intreface-container .frame1 {
+    flex-basis: 100%;
+    position: relative;
+    top: 100vh;
+    z-index: 999;
+  }
+  body .interface > .intreface-container > .frame3,
+  body .interface > .intreface-container .frame4,
+  body .interface > .intreface-container .frame5,
+  body .interface > .intreface-container .frame6,
+  body .interface > .intreface-container .frame7,
+  body .interface > .intreface-container .frame8,
+  body .interface > .intreface-container .frame9,
+  body .interface > .intreface-container .frame10 {
+    margin: 0;
+  }
+  body .interface > .intreface-container .frame2 {
+    flex-basis: 100%;
+    top: 0;
+    position: fixed;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper .image-container,
+  body .reservation .reservation-section3 > .section2-wrapper .image-container,
+  body .reservation .reservation-section4 > .section2-wrapper .image-container,
+  body .reservation .reservation-section5 > .section2-wrapper .image-container,
+  body .reservation .reservation-section6 > .section2-wrapper .image-container,
+  body .reservation .reservation-section7 > .section2-wrapper .image-container,
+  body .reservation .reservation-section8 > .section2-wrapper .image-container {
+    flex-basis: 50%;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper > .info-container,
+  body .reservation .reservation-section3 > .section2-wrapper > .info-container,
+  body .reservation .reservation-section4 > .section2-wrapper > .info-container,
+  body .reservation .reservation-section5 > .section2-wrapper > .info-container,
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container,
+  body .reservation .reservation-section7 > .section2-wrapper > .info-container,
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container {
+    flex-basis: 45.7%;
+  }
+  body .reservation .reservation-section5 > .section2-wrapper > .info-container > .room-info {
+    height: 40vh;
+    padding: 2rem 0;
+  }
+  body .reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper {
+    width: 50%;
+    height: 60vh;
+    align-items: center;
+  }
+  body .reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper > p {
+    width: 570px;
+    height: 100px;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container {
+    flex-basis: 100%;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper {
+    align-items: flex-end;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper > P {
+    padding: 2.2rem;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-container > .col2 {
+    background: url(./images/plaxe-family.jpeg) no-repeat center center/cover border-box;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-container > .col2 > video {
+    display: none;
+  }
+  body .reservation .reservation-section7 > .section2-wrapper > .info-container > .room-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    flex-basis: 65%;
+    gap: 0rem;
+    flex-grow: 0;
+    height: 50vh;
+  }
+  body .reservation .reservation-section7 > .section2-wrapper > .info-container > .room-info h2 {
+    font-size: 1.3rem;
+  }
+  body .reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper {
+    width: 30%;
+    height: 40vh;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer > .INFO {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 1.4rem;
+    flex-grow: 0;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer > .INFO > li {
+    font-size: 13.2px;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer .policy {
+    padding: 0;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer .policy li {
+    font-size: 12.2px;
+  }
+}
+@media all and (max-width: 1200px) and (min-width: 441px) {
+  body .reservation > .res-wrapper > .booking-section > .booking-info {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    flex-basis: 100%;
+    gap: 0.3rem;
+    flex-grow: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem 1.4rem;
+    align-items: center;
+  }
+  body .reservation > .res-wrapper > .booking-section > ul > li {
+    color: #e7e5e5;
+  }
+  body .reservation > .res-wrapper > .booking-section .res-menu > li {
+    display: none;
+  }
+  body .reservation > .res-wrapper > .booking-section > .res-menu > .menu-bar {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 0.3rem;
+    flex-grow: 0;
+    align-items: flex-end;
+    padding: 0.5rem 3.5rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    top: -50rem;
+  }
+  body .reservation > .res-wrapper > .booking-section > .res-menu > .menu-bar > .arrow {
+    display: block;
+    width: 65px;
+    height: 2px;
+    background: #ffffff;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper .image-container,
+  body .reservation .reservation-section3 > .section2-wrapper .image-container,
+  body .reservation .reservation-section4 > .section2-wrapper .image-container {
+    flex-basis: 100%;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper > .info-container,
+  body .reservation .reservation-section3 > .section2-wrapper > .info-container,
+  body .reservation .reservation-section4 > .section2-wrapper > .info-container {
+    flex-basis: 40%;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 0rem;
+    flex-grow: 0;
+    padding: 0;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper > .info-container > .room-info,
+  body .reservation .reservation-section3 > .section2-wrapper > .info-container > .room-info,
+  body .reservation .reservation-section4 > .section2-wrapper > .info-container > .room-info {
+    padding: 0rem 0;
+    align-items: center;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper > .info-container > .room-info > p,
+  body .reservation .reservation-section3 > .section2-wrapper > .info-container > .room-info > p,
+  body .reservation .reservation-section4 > .section2-wrapper > .info-container > .room-info > p {
+    font-size: 14.5px;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper > .info-container > .room-info .coffee,
+  body .reservation .reservation-section3 > .section2-wrapper > .info-container > .room-info .coffee,
+  body .reservation .reservation-section4 > .section2-wrapper > .info-container > .room-info .coffee {
+    position: relative;
+    top: -35px;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper .view-all,
+  body .reservation .reservation-section3 > .section2-wrapper .view-all,
+  body .reservation .reservation-section4 > .section2-wrapper .view-all {
+    flex-basis: 40%;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper .view-all > p,
+  body .reservation .reservation-section3 > .section2-wrapper .view-all > p,
+  body .reservation .reservation-section4 > .section2-wrapper .view-all > p {
+    position: relative;
+    top: -3rem;
+  }
+  body .reservation .reservation-section5 > .section2-wrapper > .info-container > .room-info {
+    height: 40vh;
+    padding: 2rem 0;
+  }
+  body .reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-text {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 0rem;
+    flex-grow: 0;
+  }
+  body .reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper {
+    width: 60%;
+    height: 60vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 0rem;
+    flex-grow: 0;
+    align-items: center;
+    padding: 0;
+  }
+  body .reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper > p {
+    width: 500px;
+    height: 100px;
+    padding: 0 0rem;
+    position: relative;
+    text-align: center;
+    top: -3rem;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container {
+    flex-basis: 100%;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper {
+    align-items: flex-start;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper > P {
+    padding: 2.2rem;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-container > .col2 {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.2470588235), rgba(0, 0, 0, 0.2470588235), rgba(0, 0, 0, 0.2470588235)), url(./images/plaxe-family.avif) no-repeat center center/cover border-box;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-container > .col2 > video {
+    display: none;
+  }
+  body .reservation .reservation-section7 > .section2-wrapper > .info-container > .room-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    flex-basis: 65%;
+    gap: 0rem;
+    flex-grow: 0;
+    height: 40vh;
+  }
+  body .reservation .reservation-section7 > .section2-wrapper > .info-container > .room-info h2 {
+    font-size: 1.5rem;
+  }
+  body .reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper {
+    width: 30%;
+    height: 40vh;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer > .INFO {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 1.4rem;
+    flex-grow: 0;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer > .INFO > li {
+    font-size: 13.2px;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer .policy {
+    padding: 0;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer .policy li {
+    font-size: 12.2px;
+  }
+}
+@media all and (max-width: 500px) and (min-width: 441px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  body .interface > .intreface-container {
+    position: relative;
+  }
+  body .interface > .intreface-container .frame1 {
+    flex-basis: 100%;
+    position: relative;
+    top: 100vh;
+    z-index: 999;
+  }
+  body .interface > .intreface-container > .frame3,
+  body .interface > .intreface-container .frame4,
+  body .interface > .intreface-container .frame5,
+  body .interface > .intreface-container .frame6,
+  body .interface > .intreface-container .frame7,
+  body .interface > .intreface-container .frame8,
+  body .interface > .intreface-container .frame9,
+  body .interface > .intreface-container .frame10 {
+    margin: 0;
+  }
+  body .interface > .intreface-container > .frame3 > .footer-note > P,
+  body .interface > .intreface-container .frame4 > .footer-note > P,
+  body .interface > .intreface-container .frame5 > .footer-note > P,
+  body .interface > .intreface-container .frame6 > .footer-note > P,
+  body .interface > .intreface-container .frame7 > .footer-note > P,
+  body .interface > .intreface-container .frame8 > .footer-note > P,
+  body .interface > .intreface-container .frame9 > .footer-note > P,
+  body .interface > .intreface-container .frame10 > .footer-note > P {
+    font: normal 200 12px Bloverly;
+  }
+  body .interface > .intreface-container .frame2 {
+    flex-basis: 100%;
+    top: 0;
+    position: fixed;
+  }
+  body .interface > .intreface-container .frame2 > .framer-img .inner-design > .booking {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-basis: 100%;
+    gap: 0.3rem;
+    flex-grow: 0;
+  }
+  body .interface > .intreface-container .frame2 > .framer-img .inner-design > .booking .menu-box {
+    padding: 1 0rem;
+    -webkit-margin-start: -3rem;
+            margin-inline-start: -3rem;
+  }
+  body .interface > .intreface-container .frame2 > .framer-img .inner-design > .booking .menu-box .menu-wrapper > .arrow {
+    width: 60px;
+    height: 2px;
+  }
+  body .interface > .intreface-container .frame2 > .framer-img .inner-design > .booking .booking-wrapper {
+    width: 120px;
+    height: 50px;
+    background: #000010;
+  }
+  body .interface > .intreface-container .frame2 > .framer-img .inner-design > #footer {
+    padding: 0;
+  }
+}
+@media all and (max-width: 440px) and (min-width: 401px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  body .interface > .intreface-container {
+    position: relative;
+  }
+  body .interface > .intreface-container .frame1 {
+    flex-basis: 100%;
+    position: relative;
+    top: 100vh;
+    z-index: 999;
+  }
+  body .interface > .intreface-container > .frame3,
+  body .interface > .intreface-container .frame4,
+  body .interface > .intreface-container .frame5,
+  body .interface > .intreface-container .frame6,
+  body .interface > .intreface-container .frame7,
+  body .interface > .intreface-container .frame8,
+  body .interface > .intreface-container .frame9,
+  body .interface > .intreface-container .frame10 {
+    margin: 0;
+  }
+  body .interface > .intreface-container > .frame3 > .footer-note > P,
+  body .interface > .intreface-container .frame4 > .footer-note > P,
+  body .interface > .intreface-container .frame5 > .footer-note > P,
+  body .interface > .intreface-container .frame6 > .footer-note > P,
+  body .interface > .intreface-container .frame7 > .footer-note > P,
+  body .interface > .intreface-container .frame8 > .footer-note > P,
+  body .interface > .intreface-container .frame9 > .footer-note > P,
+  body .interface > .intreface-container .frame10 > .footer-note > P {
+    font: normal 200 12px Bloverly;
+  }
+  body .interface > .intreface-container .frame2 {
+    flex-basis: 100%;
+    top: 0;
+    position: fixed;
+  }
+  body .interface > .intreface-container .frame2 > .framer-img .inner-design > .booking {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-basis: 100%;
+    gap: 0.3rem;
+    flex-grow: 0;
+  }
+  body .interface > .intreface-container .frame2 > .framer-img .inner-design > .booking .menu-box {
+    padding: 1 0rem;
+    -webkit-margin-start: -3rem;
+            margin-inline-start: -3rem;
+  }
+  body .interface > .intreface-container .frame2 > .framer-img .inner-design > .booking .menu-box .menu-wrapper > .arrow {
+    width: 60px;
+    height: 2px;
+  }
+  body .interface > .intreface-container .frame2 > .framer-img .inner-design > .booking .booking-wrapper {
+    width: 120px;
+    height: 50px;
+    background: #000010;
+  }
+  body .interface > .intreface-container .frame2 > .framer-img .inner-design > .footer {
+    padding: 0;
+    background: rgba(134, 105, 18, 0.2196078431);
+    -webkit-backdrop-filter: blur(4rem);
+    backdrop-filter: blur(4rem);
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    flex-basis: 100%;
+    gap: 0.5rem;
+    flex-grow: 0;
+    -webkit-padding-end: 0rem;
+            padding-inline-end: 0rem;
+  }
+  body .interface > .intreface-container .frame2 > .framer-img .inner-design > .footer > p {
+    font: normal 100 12.8px Bloverly;
+    color: #b8b08d;
+  }
+  body .reservation > .res-wrapper > .booking-section > .booking-info {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    flex-basis: 100%;
+    gap: 0.3rem;
+    flex-grow: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem 1.4rem;
+    align-items: center;
+  }
+  body .reservation > .res-wrapper > .booking-section > ul > li {
+    color: #e7e5e5;
+  }
+  body .reservation > .res-wrapper > .booking-section .res-menu > li {
+    display: none;
+  }
+  body .reservation > .res-wrapper > .booking-section > .res-menu > .menu-bar {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 0.3rem;
+    flex-grow: 0;
+    align-items: flex-end;
+    padding: 0.5rem 3.5rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    top: -56.6rem;
+  }
+  body .reservation > .res-wrapper > .booking-section > .res-menu > .menu-bar > .arrow {
+    display: block;
+    width: 65px;
+    height: 2px;
+    background: #ffffff;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper .image-container,
+  body .reservation .reservation-section3 > .section2-wrapper .image-container,
+  body .reservation .reservation-section4 > .section2-wrapper .image-container {
+    flex-basis: 100%;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper > .info-container,
+  body .reservation .reservation-section3 > .section2-wrapper > .info-container,
+  body .reservation .reservation-section4 > .section2-wrapper > .info-container {
+    flex-basis: 40%;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 0rem;
+    flex-grow: 0;
+    padding: 0;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper > .info-container > .room-info,
+  body .reservation .reservation-section3 > .section2-wrapper > .info-container > .room-info,
+  body .reservation .reservation-section4 > .section2-wrapper > .info-container > .room-info {
+    padding: 0rem 0;
+    align-items: flex-start;
+    height: 50px;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper > .info-container > .room-info > p,
+  body .reservation .reservation-section3 > .section2-wrapper > .info-container > .room-info > p,
+  body .reservation .reservation-section4 > .section2-wrapper > .info-container > .room-info > p {
+    font-size: 14.8px;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper > .info-container > .room-info .coffee,
+  body .reservation .reservation-section3 > .section2-wrapper > .info-container > .room-info .coffee,
+  body .reservation .reservation-section4 > .section2-wrapper > .info-container > .room-info .coffee {
+    position: relative;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper .view-all,
+  body .reservation .reservation-section3 > .section2-wrapper .view-all,
+  body .reservation .reservation-section4 > .section2-wrapper .view-all {
+    flex-basis: 100%;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper .view-all > p,
+  body .reservation .reservation-section3 > .section2-wrapper .view-all > p,
+  body .reservation .reservation-section4 > .section2-wrapper .view-all > p {
+    position: relative;
+    top: -30px;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper .view-all .discover-coffee,
+  body .reservation .reservation-section3 > .section2-wrapper .view-all .discover-coffee,
+  body .reservation .reservation-section4 > .section2-wrapper .view-all .discover-coffee {
+    position: relative;
+    top: -200px;
+  }
+  body .reservation .reservation-section5 > .section2-wrapper > .info-container > .room-info {
+    height: 40vh;
+    padding: 2rem 0;
+  }
+  body .reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-text {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 0rem;
+    flex-grow: 0;
+  }
+  body .reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper {
+    width: 60%;
+    height: 60vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 0rem;
+    flex-grow: 0;
+    align-items: center;
+    padding: 0;
+  }
+  body .reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper > p {
+    width: 345px;
+    height: 50px;
+    padding: 0 0rem;
+    position: relative;
+    top: -3rem;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container {
+    flex-basis: 100%;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper {
+    align-items: flex-start;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper > P {
+    padding: 3rem;
+    width: 450px;
+    height: 250px;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-container > .col2 {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.2470588235), rgba(0, 0, 0, 0.2470588235), rgba(0, 0, 0, 0.2470588235)), url(./images/plaxe-family.avif) no-repeat center center/cover border-box;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-container > .col2 > video {
+    display: none;
+  }
+  body .reservation .reservation-section7 > .section2-wrapper > .info-container > .room-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    flex-basis: 95%;
+    gap: 0rem;
+    flex-grow: 0;
+    height: 40vh;
+  }
+  body .reservation .reservation-section7 > .section2-wrapper > .info-container > .room-info h2 {
+    font-size: 1.5rem;
+  }
+  body .reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper {
+    width: 60%;
+    height: 40vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 0rem;
+    flex-grow: 0;
+    padding: 0;
+  }
+  body .reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper > p {
+    width: 360px;
+    height: 100px;
+    text-align: center;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer > .INFO {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 1.4rem;
+    flex-grow: 0;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer > .INFO > li {
+    font-size: 13.2px;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer .policy {
+    padding: 0;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer .policy li {
+    font-size: 11.2px;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .alcemy-text-footer {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    flex-basis: 90%;
+    gap: 0rem;
+    flex-grow: 0;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper {
+    width: 100%;
+    height: 50vh;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper > p {
+    width: 470px;
+    height: 50px;
+    text-align: center;
+  }
+}
+@media all and (max-width: 400px) and (min-width: 0px) {
+  body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  body .interface > .intreface-container {
+    position: relative;
+  }
+  body .interface > .intreface-container .frame1 {
+    flex-basis: 100%;
+    position: relative;
+    top: 100vh;
+    z-index: 999;
+  }
+  body .interface > .intreface-container > .frame3,
+  body .interface > .intreface-container .frame4,
+  body .interface > .intreface-container .frame5,
+  body .interface > .intreface-container .frame6,
+  body .interface > .intreface-container .frame7,
+  body .interface > .intreface-container .frame8,
+  body .interface > .intreface-container .frame9,
+  body .interface > .intreface-container .frame10 {
+    margin: 0;
+  }
+  body .interface > .intreface-container > .frame3 > .footer-note > P,
+  body .interface > .intreface-container .frame4 > .footer-note > P,
+  body .interface > .intreface-container .frame5 > .footer-note > P,
+  body .interface > .intreface-container .frame6 > .footer-note > P,
+  body .interface > .intreface-container .frame7 > .footer-note > P,
+  body .interface > .intreface-container .frame8 > .footer-note > P,
+  body .interface > .intreface-container .frame9 > .footer-note > P,
+  body .interface > .intreface-container .frame10 > .footer-note > P {
+    font: normal 200 12px Bloverly;
+  }
+  body .interface > .intreface-container .frame2 {
+    flex-basis: 100%;
+    top: 0;
+    position: fixed;
+  }
+  body .interface > .intreface-container .frame2 > .framer-img .inner-design > .booking {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-basis: 100%;
+    gap: 0.3rem;
+    flex-grow: 0;
+  }
+  body .interface > .intreface-container .frame2 > .framer-img .inner-design > .booking .menu-box {
+    padding: 1 0rem;
+    -webkit-margin-start: -3rem;
+            margin-inline-start: -3rem;
+  }
+  body .interface > .intreface-container .frame2 > .framer-img .inner-design > .booking .menu-box .menu-wrapper > .arrow {
+    width: 60px;
+    height: 2px;
+  }
+  body .interface > .intreface-container .frame2 > .framer-img .inner-design > .booking .booking-wrapper {
+    width: 120px;
+    height: 50px;
+    background: #000010;
+  }
+  body .interface > .intreface-container .frame2 > .framer-img .inner-design > .footer {
+    padding: 0;
+    background: rgba(134, 105, 18, 0.2196078431);
+    -webkit-backdrop-filter: blur(4rem);
+    backdrop-filter: blur(4rem);
+    align-items: center;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+    flex-basis: 100%;
+    gap: 0.5rem;
+    flex-grow: 0;
+    -webkit-padding-end: 0rem;
+            padding-inline-end: 0rem;
+    display: none;
+  }
+  body .interface > .intreface-container .frame2 > .framer-img .inner-design > .footer > p {
+    font: normal 100 12.8px Bloverly;
+    color: #b8b08d;
+  }
+  body .reservation > .res-wrapper > .booking-section > .booking-info {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    flex-basis: 100%;
+    gap: 0.3rem;
+    flex-grow: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem 1.4rem;
+    align-items: center;
+  }
+  body .reservation > .res-wrapper > .booking-section > ul > li {
+    color: #e7e5e5;
+  }
+  body .reservation > .res-wrapper > .booking-section .res-menu > li {
+    display: none;
+  }
+  body .reservation > .res-wrapper > .booking-section > .res-menu > .menu-bar {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 0.3rem;
+    flex-grow: 0;
+    align-items: flex-end;
+    padding: 0.5rem 3.5rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    top: -56.6rem;
+  }
+  body .reservation > .res-wrapper > .booking-section > .res-menu > .menu-bar > .arrow {
+    display: block;
+    width: 65px;
+    height: 2px;
+    background: #ffffff;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper .image-container,
+  body .reservation .reservation-section3 > .section2-wrapper .image-container,
+  body .reservation .reservation-section4 > .section2-wrapper .image-container {
+    flex-basis: 100%;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper > .info-container,
+  body .reservation .reservation-section3 > .section2-wrapper > .info-container,
+  body .reservation .reservation-section4 > .section2-wrapper > .info-container {
+    flex-basis: 40%;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 0rem;
+    flex-grow: 0;
+    padding: 0;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper > .info-container > .room-info,
+  body .reservation .reservation-section3 > .section2-wrapper > .info-container > .room-info,
+  body .reservation .reservation-section4 > .section2-wrapper > .info-container > .room-info {
+    padding: 0rem 0;
+    align-items: flex-start;
+    height: 50px;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper > .info-container > .room-info > p,
+  body .reservation .reservation-section3 > .section2-wrapper > .info-container > .room-info > p,
+  body .reservation .reservation-section4 > .section2-wrapper > .info-container > .room-info > p {
+    font-size: 14.3px;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper > .info-container > .room-info .coffee,
+  body .reservation .reservation-section3 > .section2-wrapper > .info-container > .room-info .coffee,
+  body .reservation .reservation-section4 > .section2-wrapper > .info-container > .room-info .coffee {
+    position: relative;
+    top: -7px;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper .view-all,
+  body .reservation .reservation-section3 > .section2-wrapper .view-all,
+  body .reservation .reservation-section4 > .section2-wrapper .view-all {
+    flex-basis: 100%;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper .view-all > p,
+  body .reservation .reservation-section3 > .section2-wrapper .view-all > p,
+  body .reservation .reservation-section4 > .section2-wrapper .view-all > p {
+    position: relative;
+    top: -20px;
+  }
+  body .reservation .reservation-section2 > .section2-wrapper .view-all .discover-coffee,
+  body .reservation .reservation-section3 > .section2-wrapper .view-all .discover-coffee,
+  body .reservation .reservation-section4 > .section2-wrapper .view-all .discover-coffee {
+    position: relative;
+    top: -200px;
+  }
+  body .reservation .reservation-section5 > .section2-wrapper > .info-container > .room-info {
+    height: 40vh;
+    padding: 2rem 0;
+  }
+  body .reservation .reservation-section5 > .section2-wrapper > .info-container > .room-info > h2 {
+    font-size: 1.3rem;
+  }
+  body .reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-text {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 0rem;
+    flex-grow: 0;
+  }
+  body .reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper {
+    width: 60%;
+    height: 60vh;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 0rem;
+    flex-grow: 0;
+    align-items: center;
+    padding: 0;
+  }
+  body .reservation .reservation-section5 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper > p {
+    width: 345px;
+    height: 50px;
+    padding: 0 0rem;
+    position: relative;
+    text-align: center;
+    top: -3rem;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container {
+    flex-basis: 100%;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper {
+    align-items: flex-start;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 0rem;
+    flex-grow: 0;
+    padding: 0rem 0rem;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper > P {
+    padding: 3rem;
+    width: 200px;
+    height: 270px;
+    text-align: center;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-container > .col2 {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.2470588235), rgba(0, 0, 0, 0.2470588235), rgba(0, 0, 0, 0.2470588235)), url(./images/plaxe-family.avif) no-repeat center center/cover border-box;
+  }
+  body .reservation .reservation-section6 > .section2-wrapper > .info-container .alcemy-container > .col2 > video {
+    display: none;
+  }
+  body .reservation .reservation-section7 > .section2-wrapper > .info-container > .room-info {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    flex-basis: 90%;
+    gap: 0rem;
+    flex-grow: 0;
+    height: 40vh;
+  }
+  body .reservation .reservation-section7 > .section2-wrapper > .info-container > .room-info h2 {
+    font-size: 1.3rem;
+  }
+  body .reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper {
+    width: 60%;
+    height: 40vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 0rem;
+    flex-grow: 0;
+    padding: 0;
+  }
+  body .reservation .reservation-section7 > .section2-wrapper > .info-container .alcemy-text > .text-wrapper > p {
+    width: 360px;
+    height: 100px;
+    text-align: center;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer > .INFO {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-basis: 100%;
+    gap: 1.4rem;
+    flex-grow: 0;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer > .INFO > li {
+    font-size: 13.2px;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer .policy {
+    padding: 0;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .menu-footer .policy li {
+    font-size: 11.2px;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .alcemy-text-footer {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    flex-basis: 90%;
+    gap: 0rem;
+    flex-grow: 0;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper {
+    width: 100%;
+    height: 50vh;
+  }
+  body .reservation .reservation-section8 > .section2-wrapper > .info-container .alcemy-text-footer > .text-wrapper > p {
+    width: 470px;
+    height: 50px;
+    text-align: center;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,159 @@
+$Fonts-color : ("dim" : #C7C3C3,
+   "white" : #b5b3b2,
+   "light" : #1d1d1d,
+   "grey" : #383838,
+   "red" : #d1cfc6,
+   "black" : #191816,
+   "footer" : #db9405);
+$BG-color : ("dim" : #a2895df2,
+   "black" : #0e100f,
+   "frame" : #191818,
+   "nav" : #a22401,
+   "white" : #cec6c6,
+   "bright" : #967440,
+   "light" : #c3c2c2,
+   "radial" : #c06a01,
+   "empty" : #ffffff00,
+   "red" : #1f4975);
+
+
+@mixin flex($direction, $position , $base, $gap, $grow ) {
+   display: flex;
+   flex-flow: $direction;
+   justify-content: $position;
+   flex-basis: $base;
+   gap: $gap;
+   flex-grow: $grow;
+}
+
+@mixin size($width, $height) {
+   width: $width;
+   height: $height;
+}
+
+.menu-dropdown {
+   display: none;
+}
+.show {
+   @include size(100%, 100vh);
+   background: map-get($BG-color, "bright");
+   padding: 1rem;
+   box-sizing: border-box;
+   overflow-x: hidden;
+   overflow-y: auto;
+   scroll-behavior: smooth;
+
+
+
+   &::-webkit-scrollbar {
+      display: none;
+   }
+
+   &>.menu-wrapper {
+      box-sizing: border-box;
+      @include flex(row wrap, space-between, 100%, 0.30rem, 0);
+
+      &>.menu-header {
+         flex-basis: 100%;
+         @include size(100%, 80px);
+
+
+         &>.cancel-menu {
+            @include size(150px, 60px);
+            @include flex(column, center, 100%, 0.30rem, 0);
+            padding-left: 3rem;
+            box-sizing: border-box;
+            position: relative;
+            z-index: 888;
+            cursor: pointer;
+
+            &>.exit {
+               display: block;
+               @include size(60px, 2.5px);
+               background: #212121;
+            }
+
+            .left {
+               transform: rotate(45deg);
+            }
+
+            .right {
+               transform: rotate(-45deg);
+            }
+
+            &:hover > .exit {
+               background: #6b2102;
+               transition: all .3s linear;
+            }
+         }
+
+         .plaxe-logo {
+            background: url(./images/plaxe-blackLogo.png) no-repeat center center / contain border-box;
+            transform: translate(0, -70px);
+            padding: 2.5rem;
+            box-sizing: border-box;
+         }
+      }
+
+      .menu-nav {
+         @include size(100%, max-content);
+         padding: 7rem;
+         flex-basis: 100%;
+         box-sizing: border-box;
+         background: map-get($BG-color, "bright");
+
+         &>h1 {
+            margin: 0;
+            font: normal 200 3.5rem bloverly;
+            cursor: pointer;
+            padding: 15px;
+            color: map-get($Fonts-color, "white");
+
+            &:hover {
+               color: #272625;
+               transition: all .3s linear;
+            }
+
+         }
+      }
+
+      .menu-footer {
+         @include size(100%, max-content);
+         padding: 1rem;
+         box-sizing: border-box;
+
+         &>.INFO {
+            margin: 0;
+            @include flex(row, space-evenly, 100%, 0.30rem, 0);
+            @include size(100%, 50px);
+            &>li {
+               list-style: none;
+               font: normal 200 14.8px Bloverly;
+               color: map-get($Fonts-color, "black");
+               text-transform: uppercase;
+               cursor: pointer;
+
+               &:hover {
+                  color: #b5b3b2;
+                  transition: all .2s linear;
+                  text-decoration: underline 1.6px;
+                  text-underline-offset: 4.6px;
+               }
+            }
+         }
+         .policy {
+            @include flex(row, center, 100%, 0.30rem, 0);
+            align-items: flex-end;
+            @include size(100%,70px );
+            margin: 0;
+            & > li {
+               list-style: none;
+               font: normal 200 13.3px Bloverly;
+               color: map-get($Fonts-color, "black");
+               text-transform: uppercase;
+               letter-spacing: 1.2px;
+            }
+         }
+      }
+   }
+}

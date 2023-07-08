@@ -1,0 +1,278 @@
+@font-face {
+   font-family: Bloverly;
+   src: url(./fonts/bloverly.otf);
+}
+@font-face {
+   font-family: inc;
+   src: url(./fonts/MeriluxDemo-Regular-BF6487df3eeb5b4.otf);
+}
+@font-face {
+   font-family: sf;
+   src: url(./fonts/sf-compact-display-light.otf);
+}
+
+
+$Fonts-color : ("dim" : #C7C3C3,
+   "white" : #b5b3b2,
+   "light" : #1d1d1d,
+   "grey" : #383838,
+   "red" : #d1cfc6,
+   "blue" : #FA3B11,
+   "footer" : #db9405);
+$BG-color : ("dim" : #a2895df2,
+   "black" : #0e100f,
+   "frame" : #191818,
+   "nav" : #a22401,
+   "white" : #cec6c6,
+   "bright" : #7e2a07,
+   "light" : #c3c2c2,
+   "radial" : #c06a01,
+   "empty" : #ffffff00,
+   "red" : #1f4975);
+
+
+@mixin flex($direction, $position , $base, $gap, $grow ) {
+   display: flex;
+   flex-flow: $direction;
+   justify-content: $position;
+   flex-basis: $base;
+   gap: $gap;
+   flex-grow: $grow;
+}
+
+@mixin size($width, $height) {
+   width: $width;
+   height: $height;
+}
+
+
+body {
+   @include size(100%, max-content);
+   background: map-get($BG-color, "white");
+   box-sizing: border-box;
+   overflow: hidden;
+   margin: 0;
+   padding: 0;
+
+   &::-webkit-scrollbar {
+      display: none;
+   }
+}
+
+.interface {
+   @include size(100%, max-content);
+   box-sizing: border-box;
+   background: map-get($BG-color, "frame");
+
+   &>.intreface-container {
+      @include size(100%, max-content);
+      @include flex(row wrap, flex-start, 100%, 0.15rem, 0);
+
+      .frame1 {
+         overflow-x: hidden;
+         overflow-y: auto;
+         position: relative;
+         @include size(100%, 100vh);
+         flex-basis: 35%;
+         scroll-snap-align: start;
+         scroll-behavior: smooth;
+         scroll-snap-type: y mandatory;
+
+
+
+
+         &::-webkit-scrollbar {
+            display: none;
+         }
+
+         &>.framer-img {
+            @include size(100%, 100vh);
+            box-sizing: border-box;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+
+            &>video {
+               object-fit: cover;
+               object-position: center;
+               @include size(100%, 100%);
+            }
+
+            & > .scroll {
+               font: normal 200 11.3px Bloverly;
+               color: map-get($Fonts-color, "white");
+               text-transform: uppercase;
+               position: absolute;
+               @include size(100%,100% );
+               text-align: center;
+               transform: translate(0, 100px);
+               letter-spacing: 8px;
+               top: 0;
+               animation: dim 30s linear infinite;
+            }
+            @keyframes dim {
+                  0%{
+                     opacity: 0;
+                  }
+                  30%{
+                     opacity: 40;
+                  }
+                  60%{
+                     opacity: 80;
+                  }
+                  100%{
+                     opacity: 1;
+                  }
+            }
+         }
+
+         &>.frame3,
+         .frame4,
+         .frame5,
+         .frame6, .frame7,.frame8,.frame9, .frame10{
+            @include size(100%, 100vh);
+            box-sizing: border-box;
+            z-index: 23;
+            margin-top: 10px;
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+
+            & > .footer-note {
+               @include size(100%,100vh );
+               background: map-get($BG-color, "white" );
+               @include flex(column, center, 100%, 0.30rem, 0);
+               align-items: center;
+
+               & > P {
+                  font: normal 200 12.8px Bloverly;
+                     color: map-get($Fonts-color, "light");
+                     text-transform: uppercase;
+                     cursor: pointer;
+
+                     &:hover {
+                        color: #996704;
+                        transition: all .4s linear;
+                     }
+               }
+            }
+
+
+            &>img {
+               object-fit: cover;
+               object-position: center;
+               @include size(100%, 100%);
+            }
+         }
+      }
+
+      .frame2 {
+         flex-basis: 64.8%;
+         background: #1b1a1a;
+
+         &>.framer-img {
+            position: relative;
+            @include size(100%, 100vh);
+            box-sizing: border-box;
+            overflow: hidden;
+
+            &>img {
+               position: absolute;
+               object-fit: cover;
+               object-position: center;
+               @include size(100%, 101%);
+               z-index: 2;
+            }
+
+            .inner-design {
+               @include size(100%, 100vh);
+               position: relative;
+               z-index: 333;
+               @include flex(row wrap, center, 100%, 0.30rem, 0);
+
+
+               &>.booking {
+                  flex-basis: 100%;
+                  @include flex(row wrap, space-between, 100%, 0.30rem, 0);
+                  padding: 3rem;
+                  box-sizing: border-box;
+
+                  &>.menu-box {
+                     padding: 1rem 2rem;
+                     box-sizing: border-box;
+
+                     .menu-wrapper {
+                        @include flex(column, center, 100%, 0.30rem, 0);
+                        align-items: center;
+                        padding: 0.50rem;
+                        box-sizing: border-box;
+                        cursor: pointer;
+
+
+                        &>.arrow {
+                           display: block;
+                           @include size(90px, 2px);
+                           background: #a4a4a4;
+                        }
+                     }
+
+                  }
+
+                  .booking-wrapper {
+                     @include size(150px, 50px);
+                     @include flex(row, center, 170px, 0.30rem, 0);
+                     align-items: center;
+                     background: #3A4D2C;
+                     border-radius: 500px;
+
+                     &>h3 {
+                        margin: 0;
+                        & > a{
+                           text-decoration: none;
+                           text-align: center;
+                           font: normal 200 18px Bloverly;
+                           text-transform: uppercase;
+                           cursor: pointer;
+                           color: #afaeae;
+                        }
+                     }
+
+                     &:hover > h3 > a {
+                        color: rgb(200, 131, 4);
+                        transition: all .4s linear;
+                     }
+                  }
+               }
+
+               &>.brand-logo {
+                  flex-basis: 100%;
+
+                  &>.logo {
+                     background: url(./images/PLAXE-LOGO.png) no-repeat center center / contain border-box;
+                     transform: translate(0, 70px);
+                     padding: 11rem;
+                     box-sizing: border-box;
+                  }
+
+               }
+
+               &>.footer {
+                  flex-basis: 100%;
+                  @include flex(row, space-evenly, 100%, 2rem, 0);
+                  padding: 0 2rem;
+                  padding-inline-end: 3.5rem;
+
+                  &>p {
+                     font: normal 200 12.8px Bloverly;
+                     color: map-get($Fonts-color, "white");
+                     text-transform: uppercase;
+                  }
+               }
+
+            }
+         }
+      }
+   }
+}
+
+@import "./menu";
+@import "./reservation";
+@import "./mediaQuery";

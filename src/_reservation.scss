@@ -1,0 +1,883 @@
+$Fonts-color : ("dim" : #C7C3C3,
+   "white" : #838180,
+   "light" : #7d7d7d,
+   "grey" : #383838,
+   "red" : #d1cfc6,
+   "blue" : #FA3B11,
+   "footer" : #db9405);
+$BG-color : ("dim" : #a2895df2,
+   "black" : #201f1f,
+   "frame" : #191818,
+   "nav" : #a22401,
+   "white" : #cec6c6,
+   "bright" : #7e2a07,
+   "light" : #c3c2c2,
+   "radial" : #c06a01,
+   "empty" : #ffffff00,
+   "red" : #1f4975);
+
+
+@mixin flex($direction, $position , $base, $gap, $grow ) {
+   display: flex;
+   flex-flow: $direction;
+   justify-content: $position;
+   flex-basis: $base;
+   gap: $gap;
+   flex-grow: $grow;
+}
+
+@mixin size($width, $height) {
+   width: $width;
+   height: $height;
+}
+
+
+.reservation {
+   @include size(100%, 100vh);
+   background: map-get($BG-color, "black");
+   overflow-y: auto;
+   overflow-x: hidden;
+   position: relative;
+   scroll-snap-align: start;
+   scroll-behavior: smooth;
+   scroll-snap-type: y mandatory;
+
+
+   &>.res-wrapper {
+      @include size(100%, max-content);
+      background: map-get($BG-color, "black");
+      box-sizing: border-box;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      position: relative;
+
+      &>img {
+         top: 0;
+         position: absolute;
+         z-index: 3;
+         object-fit: cover;
+         object-position: center;
+         @include size(100%, 100%);
+      }
+
+      &>.booking-section {
+         @include flex(row wrap, flex-start, 100%, 0.30rem, 0);
+         @include size(100%, 100vh);
+         background: linear-gradient(to top, #83818141, #00000000, #000);
+         position: relative;
+         z-index: 4444;
+
+         .res-menu {
+            flex-basis: 100%;
+            position: relative;
+            z-index: 4444;
+
+            &>li {
+               @include flex(column, flex-end, 100%, 0.30rem, 0);
+               align-items: flex-end;
+               padding: 0rem 2rem;
+
+               &>p {
+                  flex-basis: 100%;
+                  @include size(110px, 20px);
+                  line-height: 1.3em;
+                  font-family: sf;
+                  text-align: center;
+                  color: map-get($Fonts-color, "white");
+               }
+
+            }
+
+         }
+
+         &>.res-menu>.menu-bar {
+            @include flex(column, flex-end, 100%, 0.30rem, 0);
+            align-items: flex-end;
+            padding: 0.50rem 3.5rem;
+            box-sizing: border-box;
+            cursor: pointer;
+
+
+
+            &>.arrow {
+               display: block;
+               @include size(65px, 2px);
+               background: #ffffff;
+            }
+         }
+
+         &>.booking-info {
+            flex-basis: 100%;
+            @include size(100%, 80vh);
+            @include flex(row wrap, space-between, 100%, 0.30rem, 0);
+            padding: 1.5rem 3rem;
+            box-sizing: border-box;
+            align-items: flex-start;
+
+
+         }
+
+         &>ul>li {
+            list-style: none;
+            cursor: pointer;
+            list-style: none;
+            font: normal 200 15px sf;
+            color: map-get($Fonts-color, "light");
+            position: relative;
+
+
+
+            & .selector::after {
+               content: '';
+               position: absolute;
+               transform: translate(13px, -5px);
+               background: url(./icon/iconmonstr-caret-down-filled-240-grey.png) no-repeat center center / contain border-box;
+               padding: 0.80rem;
+               cursor: pointer;
+
+            }
+
+            &>.book-now {
+               @include size(150px, 50px);
+               @include flex(row, center, 170px, 0.30rem, 0);
+               align-items: center;
+               background: #3A4D2C;
+               border-radius: 500px;
+
+               &>h3 {
+                  text-align: center;
+                  font: normal 200 18px Bloverly;
+                  text-transform: uppercase;
+                  cursor: pointer;
+                  color: #afaeae;
+               }
+            }
+
+         }
+
+         &>ul>li>small {
+            display: block;
+            text-align: center;
+            padding-top: 1rem;
+         }
+
+
+
+         .side-quote li>p {
+            flex-basis: 100%;
+            @include size(110px, 20px);
+            line-height: 1.3em;
+            font-family: sf;
+            text-align: center;
+         }
+
+      }
+   }
+
+   .reservation-section2,
+   .reservation-section3,
+   .reservation-section4,
+   .reservation-section5,
+   .reservation-section6,
+   .reservation-section7,
+   .reservation-section8{
+      @include size(100%, 100vh);
+      background: #201f1f;
+      position: relative;
+      z-index: 444;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+
+      &>.section2-wrapper {
+         @include size(100%, max-content);
+         @include flex(row wrap, flex-start, 100%, 0.2rem, 0);
+
+         &>.image-container {
+            flex-basis: 70%;
+            @include size(100%, 100vh);
+            @include flex(row, flex-start, 70%, 0rem, 0);
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: relative;
+            scroll-snap-align: start;
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+
+            &::-webkit-scrollbar {
+               display: none;
+            }
+
+
+            .col1 {
+               position: relative;
+               @include flex(row wrap, flex-start, 100%, 0.40rem, 0);
+               background: #201f1f;
+
+               &>img {
+                  scroll-snap-align: start;
+                  scroll-snap-stop: always;
+                  object-fit: cover;
+                  object-position: center;
+                  @include size(100%, 100%);
+
+
+               }
+            }
+
+
+
+         }
+
+         &>.info-container {
+            @include flex(row wrap, center, 100%, 0rem, 0);
+            padding: 1rem 0;
+            @include size(100%, 95vh);
+            align-items: center;
+            flex-basis: 29.7%;
+
+            &>.room-info {
+               @include flex(row wrap, center, 100%, 0rem, 0);
+               align-items: center;
+               padding: 4rem 0;
+               height: 60vh;
+               position: relative;
+               z-index: 77;
+
+               &>p {
+                  @include size(350px, 100px);
+                  line-height: 1.7em;
+                  font-family: sf;
+                  font-weight: 100;
+                  font-size: 14.5px;
+                  font-style: italic;
+                  text-align: center;
+                  color: map-get($Fonts-color, "white");
+
+               }
+            }
+
+            .view-all {
+               flex-basis: 100%;
+               height: 0vh;
+               position: relative;
+               z-index: 77;
+
+               &>p {
+                  line-height: 1.3em;
+                  font-family: sf;
+                  font-size: 13.8px;
+                  text-align: center;
+                  color: map-get($Fonts-color, "white");
+                  cursor: pointer;
+                  text-decoration: underline;
+                  text-underline-offset: 4px;
+
+                  &:hover {
+                     color: #ac4a03;
+                     transition: all .2s linear;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .reservation-section5 {
+      background: #d3d5d5;
+      @include size(100%, 100vh);
+
+      &>.section2-wrapper {
+         @include size(100%, max-content);
+         @include flex(row wrap, center, 100%, 0.2rem, 0);
+
+
+         &>.info-container {
+            @include flex(row wrap, center, 100%, 0rem, 0);
+            padding: 1rem 0;
+            @include size(100%, 100vh);
+            align-items: center;
+            flex-basis: 100%;
+
+
+            &>.room-info {
+               @include flex(row, center, 100%, 0rem, 0);
+               align-items: center;
+               padding: 4rem 0;
+               height: 60vh;
+               position: relative;
+               z-index: 77;
+
+               &>h2 {
+                  font-size: 1.5rem;
+                  font-family: bloverly;
+                  font-style: italic;
+                  text-align: center;
+                  text-transform: uppercase;
+                  color: #525151;
+                  font-weight: 100;
+               }
+
+
+            }
+
+            .alcemy-text {
+               flex-basis: 100%;
+               @include size(100%, max-content);
+               @include flex(row, flex-end, 100%, 0rem, 0);
+
+
+               &>.text-wrapper {
+                  @include flex(row, flex-end, 100%, 0rem, 0);
+                  padding: 0 10rem;
+                  @include size(30%, 50vh);
+
+                  &>p {
+                     @include size(450px, 100px);
+                     line-height: 1.7em;
+                     font-family: sf;
+                     font-size: 14.6px;
+                     color: map-get($Fonts-color, "white");
+                  }
+               }
+
+            }
+
+            .alcemy-text-footer {
+               flex-basis: 100%;
+               @include size(100%, max-content);
+               @include flex(row, flex-end, 100%,
+                  0rem, 0);
+
+               &>.text-wrapper {
+                  @include flex(row, flex-start, 100%, 0rem, 0);
+                  padding: 0 10rem;
+                  align-items: center;
+                  @include size(30%, 50vh);
+
+
+                  &>p {
+                     @include size(450px, 100px);
+                     line-height: 1.7em;
+                     font-family: sf;
+                     font-size: 14.6px;
+                     color: map-get($Fonts-color, "white");
+                  }
+               }
+
+            }
+
+            .alcemy-container {
+               @include size(100%, 100vh);
+               @include flex(row, flex-start, 100%, 4rem, 0);
+
+               &>.col2,
+               .col3 {
+                  position: relative;
+                  @include flex(row, flex-start, 100%, 0.40rem, 0);
+                  @include size(50%, 100vh);
+                  background: #201f1f;
+
+                  &>video {
+                     object-fit: cover;
+                     object-position: center;
+                     @include size(100%, 100%);
+                  }
+               }
+
+
+            }
+
+            .alcemy-container-bottom {
+               @include size(100%, 100vh);
+               @include flex(row, flex-end, 100%, 0rem, 0);
+
+               &>.col4 {
+                  position: relative;
+                  @include flex(row wrap, flex-end, 65%, 0.40rem, 0);
+                  @include size(100%, 100vh);
+                  background: #201f1f;
+
+                  p {
+                     flex-basis: 100%;
+                     line-height: 1.3em;
+                     font-family: sf;
+                     font-size: 13.7px;
+                     color: map-get($Fonts-color, "white");
+                     text-decoration: underline;
+                     text-underline-offset: 4px;
+                  }
+
+                  &>img {
+                     object-fit: cover;
+                     object-position: center;
+                     @include size(100%, 100%);
+                  }
+               }
+
+
+            }
+
+            .view-all {
+               flex-basis: 100%;
+               height: 0vh;
+               position: relative;
+               z-index: 77;
+
+               &>p {
+                  line-height: 1.3em;
+                  font-family: sf;
+                  font-size: 13.8px;
+
+                  text-align: center;
+                  color: map-get($Fonts-color, "white");
+                  cursor: pointer;
+                  text-decoration: underline;
+                  text-underline-offset: 4px;
+
+                  &:hover {
+                     color: #ac4a03;
+                     transition: all .2s linear;
+                  }
+               }
+            }
+         }
+      }
+
+
+   }
+
+   .reservation-section6 {
+      background: #d3d5d5;
+      @include size(100%, 100vh);
+
+      &>.section2-wrapper {
+         @include size(100%, max-content);
+         @include flex(row wrap, center, 100%, 0.2rem, 0);
+
+
+         &>.info-container {
+            @include flex(row wrap, center, 100%, 0rem, 0);
+            @include size(100%, 100vh);
+            align-items: center;
+            flex-basis: 100%;
+            padding: 0;
+
+            .alcemy-text-footer {
+               flex-basis: 100%;
+               @include size(100%, max-content);
+               @include flex(row, flex-end, 100%,
+                  0rem, 0);
+               position: absolute;
+
+
+               &>.text-wrapper {
+                  @include flex(row, flex-start, 100%, 0rem, 0);
+                  padding: 0rem 2rem;
+                  align-items: flex-start;
+                  @include size(30%, 80vh);
+
+                  &>p {
+                     @include size(450px, 150px);
+                     line-height: 1.7em;
+                     font-family: sf;
+                     font-size: 14.6px;
+                     color: #d7d0be;
+                     background: #24232054;
+                     -webkit-backdrop-filter: blur(4rem);
+                     backdrop-filter: blur(4rem);
+                     border-radius: 6px;
+                     padding: 3.3rem;
+                  }
+               }
+
+            }
+
+            .alcemy-container {
+               @include size(100%, 100vh);
+               @include flex(row, flex-start, 100%, 4rem, 0);
+
+               &>.col2 {
+                  position: relative;
+                  @include flex(row, flex-start, 100%, 0.40rem, 0);
+                  @include size(100%, 100vh);
+                  background: #201f1f;
+
+                  &>video {
+                     object-fit: cover;
+                     object-position: center;
+                     @include size(100%, 100%);
+                  }
+               }
+
+
+            }
+
+
+         }
+      }
+
+   }
+
+   .reservation-section7 {
+      @include size(100%, 100vh);
+
+      &>.section2-wrapper {
+         @include size(100%, max-content);
+         @include flex(row wrap, center, 100%, 0.2rem, 0);
+
+         &>.info-container {
+            @include flex(row wrap, center, 100%, 0rem, 0);
+            padding: 1rem 0;
+            @include size(100%, 100vh);
+            align-items: center;
+            flex-basis: 100%;
+
+            &>.room-info {
+               @include flex(row, center, 50%, 0rem, 0);
+               align-items: center;
+               padding: 4rem 0;
+               height: 60vh;
+               position: relative;
+               z-index: 77;
+
+               &>h2 {
+                  font-size: 2rem;
+                  font-family: bloverly;
+                  line-height: 1.4em;
+                  font-style: italic;
+                  text-align: center;
+                  text-transform: uppercase;
+                  color: #978764;
+                  font-weight: 100;
+               }
+
+
+            }
+
+            .alcemy-text {
+               flex-basis: 100%;
+               @include size(100%, max-content);
+               @include flex(row, flex-end, 100%, 0rem, 0);
+
+               &>.text-wrapper {
+                  @include flex(row wrap, space-between, 100%, 0rem, 0);
+                  padding: 4rem 10rem;
+                  @include size(30%, 50vh);
+
+                  &>.join-now {
+                     @include size(350px, 50px);
+                     @include flex(row, center, 400px, 0.30rem, 0);
+                     align-items: center;
+                     border-radius: 8px;
+                     margin-top: 2rem;
+
+                     &>p {
+                        text-align: center;
+                        font: normal 200 13.3px sf;
+                        cursor: pointer;
+                        color: #978764;
+                        text-transform: uppercase;
+                        text-decoration: underline;
+                        text-underline-offset: 5px;
+
+                        &:hover {
+                           color: #3A4D2C;
+                           transition: all .3s linear;
+                        }
+                     }
+                  }
+
+
+
+                  &>p {
+                     @include size(450px, 100px);
+                     line-height: 1.7em;
+                     font-family: sf;
+                     font-size: 14.6px;
+                     color: map-get($Fonts-color, "white");
+
+                  }
+               }
+
+            }
+
+            .menu-footer {
+               @include size(50%, max-content);
+               padding: 1rem;
+               box-sizing: border-box;
+
+               &>.INFO {
+                  margin: 0;
+                  @include flex(column, space-evenly, 30%, 1.1rem, 0);
+                  @include size(100%, max-content);
+
+                  &>li {
+                     list-style: none;
+                     font-family: Bloverly;
+                     font-size: 14.6px;
+                     color: map-get($Fonts-color, "white");
+                     text-transform: uppercase;
+                     cursor: pointer;
+                     font-weight: 100;
+
+                     &:hover {
+                        color: #edeceb;
+                        transition: all .2s linear;
+                        text-decoration: underline 1.6px;
+                        text-underline-offset: 4.6px;
+                     }
+                  }
+               }
+
+               .policy {
+                  @include flex(row, center, 100%, 0.30rem, 0);
+                  align-items: flex-end;
+                  @include size(100%, 70px);
+                  margin: 0;
+
+                  &>li {
+                     list-style: none;
+                     font-family: Bloverly;
+                     font-size: 13.6px;
+                     color: map-get($Fonts-color, "white");
+                     text-transform: uppercase;
+                     text-transform: uppercase;
+                     letter-spacing: 1.2px;
+                     font-weight: 100;
+                  }
+               }
+            }
+
+            .alcemy-text-footer {
+               flex-basis: 100%;
+               @include size(100%, max-content);
+               @include flex(row, flex-end, 50%,
+                  0rem, 0);
+
+
+               &>.text-wrapper {
+                  @include flex(row wrap, flex-start, 100%, 0rem, 0);
+                  padding: 0 10rem;
+                  align-items: center;
+                  @include size(30%, 50vh);
+
+
+                  &>p {
+                     @include size(450px, 50px);
+                     line-height: 1.7em;
+                     font-family: sf;
+                     font-size: 14.6px;
+                     color: map-get($Fonts-color, "white");
+                  }
+
+                  .book {
+                     flex-basis: 25%;
+                     text-align: center;
+                     text-decoration: underline;
+                     text-underline-offset: 5px;
+                     cursor: pointer;
+
+
+
+                     &:hover {
+                        color: #5a853c;
+                        transition: all .3s linear;
+                     }
+                  }
+               }
+
+            }
+
+
+
+            .alcemy-container {
+               background: darkcyan;
+               @include size(100%, 100vh);
+               @include flex(row, flex-start, 100%, 4rem, 0);
+
+               &>.col2,
+               .col3 {
+                  position: relative;
+                  @include flex(row, flex-start, 100%, 0.40rem, 0);
+                  @include size(50%, 100vh);
+                  background: #201f1f;
+
+                  &>video {
+                     object-fit: cover;
+                     object-position: center;
+                     @include size(100%, 100%);
+                  }
+               }
+
+
+            }
+
+            .alcemy-container-bottom {
+               @include size(100%, 100vh);
+               @include flex(row, flex-end, 100%, 0rem, 0);
+
+               &>.col4 {
+                  position: relative;
+                  @include flex(row wrap, flex-end, 65%, 0.40rem, 0);
+                  @include size(100%, 100vh);
+                  background: #201f1f;
+
+                  p {
+                     flex-basis: 100%;
+                     line-height: 1.3em;
+                     font-family: sf;
+                     font-size: 13.7px;
+                     color: map-get($Fonts-color, "white");
+                     text-decoration: underline;
+                     text-underline-offset: 4px;
+                  }
+
+                  &>img {
+                     object-fit: cover;
+                     object-position: center;
+                     @include size(100%, 100%);
+                  }
+               }
+
+
+            }
+
+            .view-all {
+               flex-basis: 100%;
+               height: 0vh;
+               position: relative;
+               z-index: 77;
+
+               &>p {
+                  line-height: 1.3em;
+                  font-family: sf;
+                  font-size: 13.8px;
+
+                  text-align: center;
+                  color: map-get($Fonts-color, "white");
+                  cursor: pointer;
+                  text-decoration: underline;
+                  text-underline-offset: 4px;
+
+                  &:hover {
+                     color: #ac4a03;
+                     transition: all .2s linear;
+                  }
+               }
+            }
+         }
+      }
+
+
+   }
+   .reservation-section8 {
+      @include size(100%, 100vh);
+
+      &>.section2-wrapper {
+         @include size(100%, max-content);
+         @include flex(row wrap, center, 100%, 0.2rem, 0);
+
+         &>.info-container {
+            @include flex(row wrap, center, 100%, 0rem, 0);
+            padding: 1rem 0;
+            @include size(100%, 100vh);
+            align-items: center;
+            flex-basis: 100%;
+
+
+            .menu-footer {
+               @include size(100%, max-content);
+               padding: 0rem;
+               box-sizing: border-box;
+
+
+               &>.INFO {
+                  margin: 0;
+                  @include flex(row, center, 100%, 1.4rem, 0);
+                  @include size(100%, max-content);
+                  padding: 0;
+
+                  &>li {
+                     list-style: none;
+                     font-family: Bloverly;
+                     font-size: 14px;
+                     color: map-get($Fonts-color, "white");
+                     text-transform: uppercase;
+                     cursor: pointer;
+                     font-weight: 100;
+
+                     &:hover {
+                        color: #edeceb;
+                        transition: all .2s linear;
+                        text-decoration: underline 1.6px;
+                        text-underline-offset: 4.6px;
+                     }
+                  }
+               }
+
+               .policy {
+                  @include flex(row, center, 100%, 0.30rem, 0);
+                  align-items: flex-end;
+                  @include size(100%, 70px);
+                  margin: 0;
+                  padding: 0;
+
+                  &>li {
+                     list-style: none;
+                     font-family: Bloverly;
+                     font-size: 13.2px;
+                     color: map-get($Fonts-color, "white");
+                     text-transform: uppercase;
+                     text-transform: uppercase;
+                     letter-spacing: 1.2px;
+                     font-weight: 100;
+                  }
+               }
+            }
+
+            .alcemy-text-footer {
+               flex-basis: 100%;
+               @include size(100%, max-content);
+               @include flex(row, flex-end, 50%,
+                  0rem, 0);
+
+
+               &>.text-wrapper {
+                  @include flex(row wrap, center, 100%, 0rem, 0);
+                  padding: 0 0rem;
+                  align-items: center;
+                  @include size(100%, 28vh);
+
+
+                  &>p {
+                     @include size(470px, 50px);
+                     line-height: 1.7em;
+                     font-family: sf;
+                     font-size: 14.6px;
+                     color: map-get($Fonts-color, "white");
+                  }
+
+                  .book {
+                     flex-basis: 100%;
+                     text-align: center;
+                     text-decoration: underline;
+                     text-underline-offset: 5px;
+                     cursor: pointer;
+
+
+
+                     &:hover {
+                        color: #3A4D2C;
+                        transition: all .3s linear;
+                     }
+                  }
+               }
+
+            }
+
+         }
+      }
+
+
+   }
+}
