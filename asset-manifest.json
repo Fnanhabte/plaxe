@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/plaxe/static/css/main.6b2776c1.css",
-    "main.js": "/plaxe/static/js/main.2910fd3b.js",
+    "main.css": "/plaxe/static/css/main.f88ca12a.css",
+    "main.js": "/plaxe/static/js/main.cb4943d3.js",
     "static/js/787.28cb0dcd.chunk.js": "/plaxe/static/js/787.28cb0dcd.chunk.js",
     "static/media/plaxe-vaction.mp4": "/plaxe/static/media/plaxe-vaction.af0c0f12ec224ba19421.mp4",
     "static/media/pexels-anna-nekrashevich-6598884 (2160p).mp4": "/plaxe/static/media/pexels-anna-nekrashevich-6598884 (2160p).22df7d2152a9166ec04f.mp4",
@@ -36,18 +36,19 @@
     "static/media/plaxe-kitchen.jpg": "/plaxe/static/media/plaxe-kitchen.04a0c4ec70aafb2fb421.jpg",
     "static/media/plaxe-family.avif": "/plaxe/static/media/plaxe-family.3c49a6c1eed482b10254.avif",
     "static/media/sf-compact-display-light.otf": "/plaxe/static/media/sf-compact-display-light.3645c19bd2b275ab5490.otf",
+    "static/media/plaxe-com.avif": "/plaxe/static/media/plaxe-com.029e15640ec697152a21.avif",
     "static/media/bloverly.otf": "/plaxe/static/media/bloverly.0328bd3e57f64ba778ec.otf",
     "static/media/plaxe-family.jpeg": "/plaxe/static/media/plaxe-family.34045c115aad163844dd.jpeg",
     "static/media/plaxe-blackLogo.png": "/plaxe/static/media/plaxe-blackLogo.7434ebadeee573af0577.png",
     "static/media/PLAXE-LOGO.png": "/plaxe/static/media/PLAXE-LOGO.0431257930f7584d80ea.png",
     "static/media/MeriluxDemo-Regular-BF6487df3eeb5b4.otf": "/plaxe/static/media/MeriluxDemo-Regular-BF6487df3eeb5b4.fb232e793850e2ccd8a6.otf",
     "index.html": "/plaxe/index.html",
-    "main.6b2776c1.css.map": "/plaxe/static/css/main.6b2776c1.css.map",
-    "main.2910fd3b.js.map": "/plaxe/static/js/main.2910fd3b.js.map",
+    "main.f88ca12a.css.map": "/plaxe/static/css/main.f88ca12a.css.map",
+    "main.cb4943d3.js.map": "/plaxe/static/js/main.cb4943d3.js.map",
     "787.28cb0dcd.chunk.js.map": "/plaxe/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b2776c1.css",
-    "static/js/main.2910fd3b.js"
+    "static/css/main.f88ca12a.css",
+    "static/js/main.cb4943d3.js"
   ]
 }
