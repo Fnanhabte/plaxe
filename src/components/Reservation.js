@@ -20,7 +20,6 @@ import cafe2 from "../images/plaxe-cafe9.jpg"
 import cafe3 from "../images/plaxe-cafe5.jpeg"
 import cafe4 from "../images/plaxe-cafe8.jpg"
 import vecation from "../images/plaxe-vaction.mp4"
-import plaxeOutside from "../images/plaxe-outside.jpg"
 import plaxeView from "../images/plaxe-outside.jpg"
 
 
@@ -56,7 +55,7 @@ export default function Reservation() {
               </div>
               <small>Jul 3 - Jul 4</small>
             </li>
-            <li>
+            <li className='book-li'>
               <div className="book-now">
                 <h3>Book Now</h3>
               </div>
@@ -77,6 +76,9 @@ export default function Reservation() {
       <div className="reservation-section2">
         <div className="section2-wrapper">
           <div className="image-container">
+            <div className="left-right">
+            <div className="slide-icon"> </div>
+            </div>
             <div className="col1">
               <img src={rooms} alt="plaxe" />
               <img src={rooms1} alt="plaxe" />
@@ -125,7 +127,9 @@ export default function Reservation() {
               <img src={wineBar5} alt="plaxe" />
               <img src={wineBar6} alt="plaxe" />
             </div>
-
+            <div className="left-right">
+            <div className="slide-icon"> </div>
+            </div>
           </div>
 
         </div>
@@ -133,6 +137,9 @@ export default function Reservation() {
       <div className="reservation-section4">
         <div className="section2-wrapper">
           <div className="image-container">
+          <div className="left-right">
+            <div className="slide-icon"> </div>
+            </div>
             <div className="col1">
               <img src={cafe3} alt="plaxe" />
               <img src={cafe} alt="plaxe" />
@@ -146,6 +153,9 @@ export default function Reservation() {
           <div className="info-container">
             <div className="room-info">
               <p className='coffee'>Experience the captivating aroma and flavors of freshly brewed Ethiopian coffee in our cozy, elegant rooms. Each morning, wake up to the invigorating scent of coffee beans, handpicked from Ethiopia's lush highlands. Our skilled baristas will ensure that your cup is crafted to perfection, allowing you to savor the authentic taste of this renowned coffee.</p>
+              <p className='mobile-coffe'>
+              Experience the captivating aroma and flavors of freshly brewed Ethiopian coffee in our cozy, elegant rooms. Each morning, wake up to the invigorating scent of coffee beans, handpicked from Ethiopia's lush highlands.
+              </p>
             </div>
             <div className="view-all">
               <p className='discover-coffee'>
@@ -166,8 +176,11 @@ export default function Reservation() {
             </div>
             <div className="alcemy-text">
               <div className="text-wrapper">
-                <p>
+                <p className='text-desktop'>
                   In a world tuned to the fast lane, now is the time to press pause. Feel the magic of reuniting through Plaxe global alchemy. Revel in unrivalled privacy; reconnect in intimate settings; and discover the extraordinary beauty of being together again, discovering cultural traditions and storied ancient customs in the world’s most unique and under-the-radar settings.
+                </p>
+                <p className='text-mobile'>
+                In a world tuned to the fast lane, now is the time to press pause. Feel the magic of reuniting through Plaxe global alchemy.reconnect in intimate settings; and discover the extraordinary beauty of being together again.
                 </p>
               </div>
             </div>
@@ -193,13 +206,6 @@ export default function Reservation() {
                 </p>
               </div>
             </div>
-            <div className="alcemy-container-bottom">
-              <div className="col4">
-                <img src={plaxeOutside} alt="plaxe" />
-                <p>Plaxe's three-to-six-bedroom villas, ensconced in lush, coastal vegetation</p>
-              </div>
-            </div>
-
 
           </div>
 

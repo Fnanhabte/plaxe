@@ -8,7 +8,7 @@ import Reservation from './components/Reservation';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/plaxe",
     element:<App />
   },
   {
