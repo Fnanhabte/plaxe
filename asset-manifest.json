@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/plaxe/static/css/main.372444aa.css",
+    "main.css": "/plaxe/static/css/main.b505fe69.css",
     "main.js": "/plaxe/static/js/main.cb4943d3.js",
     "static/js/787.28cb0dcd.chunk.js": "/plaxe/static/js/787.28cb0dcd.chunk.js",
     "static/media/plaxe-vaction.mp4": "/plaxe/static/media/plaxe-vaction.af0c0f12ec224ba19421.mp4",
@@ -43,12 +43,12 @@
     "static/media/PLAXE-LOGO.png": "/plaxe/static/media/PLAXE-LOGO.0431257930f7584d80ea.png",
     "static/media/MeriluxDemo-Regular-BF6487df3eeb5b4.otf": "/plaxe/static/media/MeriluxDemo-Regular-BF6487df3eeb5b4.fb232e793850e2ccd8a6.otf",
     "index.html": "/plaxe/index.html",
-    "main.372444aa.css.map": "/plaxe/static/css/main.372444aa.css.map",
+    "main.b505fe69.css.map": "/plaxe/static/css/main.b505fe69.css.map",
     "main.cb4943d3.js.map": "/plaxe/static/js/main.cb4943d3.js.map",
     "787.28cb0dcd.chunk.js.map": "/plaxe/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.372444aa.css",
+    "static/css/main.b505fe69.css",
     "static/js/main.cb4943d3.js"
   ]
 }
