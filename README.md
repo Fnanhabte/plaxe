@@ -27,5 +27,5 @@ The website is built with responsive design principles, ensuring that it is acce
   <P> ✅ It's very important when we apply the 80/20 rule we will get better Performance and Speed: Optimizing our website's performance is key to providing a positive user experience. Fast-loading pages, minimal use of unnecessary scripts or plugins, and optimized images contribute to a smooth browsing experience and better search engine rankings.</P>
   <img src="https://github.com/Fnanhabte/plaxe/blob/main/src/images/QUOTES.png" width=100% height=100% />
   <hr>
- <p> If you have any questions, concerns, or suggestions, feel free to reach out to me through any of the following channels -  <a href="https://fnanhabte.github.io/plaxe/">TW</a></p>
+ <p> If you have any questions, concerns, or suggestions, feel free to reach out to me through -  <a href="https://twitter.com/GoodxHope">TW</a></p>
 </div>
