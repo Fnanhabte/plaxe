@@ -1,0 +1,876 @@
+
+$Fonts-color : ("dim" : #C7C3C3,
+   "white" : #c2bdba,
+   "light" : #8c8888,
+   "grey" : #383838,
+   "red" : #d1cfc6,
+   "blue" : #FA3B11,
+   "footer" : #db9405);
+$BG-color : ("dim" : #a2895df2,
+   "black" : #020202,
+   "frame" : #191818,
+   "nav" : #a22401,
+   "white" : #cec6c6,
+   "bright" : #7e2a07,
+   "light" : #c3c2c2,
+   "radial" : #c06a01,
+   "empty" : #ffffff00,
+   "red" : #1f4975);
+
+
+@mixin flex($direction, $position , $base, $gap, $grow ) {
+   display: flex;
+   flex-flow: $direction;
+   justify-content: $position;
+   flex-basis: $base;
+   gap: $gap;
+   flex-grow: $grow;
+}
+
+@mixin size($width, $height) {
+   width: $width;
+   height: $height;
+}
+
+.all-rooms {
+   @include size(100%, 100vh);
+   overflow-y: auto;
+   overflow-x: hidden;
+   background: linear-gradient(to bottom, #000000f1, #000000, #000);
+
+
+
+   &>.rooms-wrapper {
+      @include size(100%, max-content);
+      box-sizing: border-box;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      position: relative;
+
+
+      &>.booking-section {
+         @include flex(row wrap, flex-start, 100%, 0.30rem, 0);
+         @include size(100%, max-content);
+         position: relative;
+         z-index: 4444;
+
+         .res-menu {
+            flex-basis: 100%;
+            position: relative;
+            z-index: 4444;
+
+            &>li {
+               @include flex(column, flex-end, 100%, 0.30rem, 0);
+               align-items: flex-end;
+               padding: 0rem 2rem;
+
+               &>p {
+                  flex-basis: 100%;
+                  @include size(110px, 20px);
+                  line-height: 1.3em;
+                  font-family: sf;
+                  text-align: center;
+                  color: map-get($Fonts-color, "white");
+               }
+            }
+         }
+
+         &>.res-menu>.menu-bar {
+            @include flex(column, flex-end, 100%, 0.30rem, 0);
+            align-items: flex-end;
+            padding: 0.50rem 3.5rem;
+            box-sizing: border-box;
+            cursor: pointer;
+
+            &>.arrow {
+               display: block;
+               @include size(65px, 2px);
+               background: #ffffff;
+            }
+         }
+
+         .menu-bars {
+            display: none;
+         }
+
+         &>.booking-info {
+            flex-basis: 100%;
+            @include size(100%, max-content);
+            @include flex(row wrap, space-between, 100%, 0.30rem, 0);
+            padding: 1.5rem 3rem;
+            box-sizing: border-box;
+            align-items: center;
+         }
+
+         &>ul>li {
+            list-style: none;
+
+            & > .selector > a {
+               text-decoration: none;
+               cursor: pointer;
+               list-style: none;
+               font: normal 200 15px sf;
+               color: map-get($Fonts-color, "white");
+               position: relative;
+               cursor: pointer;
+
+               &:hover {
+                  text-decoration: line-through;
+                  transition: all .3s linear;
+                  color:#a27b06;
+               }
+            }
+
+            &>.book-now {
+               @include size(150px, 42px);
+               @include flex(row, center, 170px, 0.30rem, 0);
+               align-items: center;
+               background: #242722;
+               border: 2px solid ghostwhite;
+               border-radius: 500px;
+               &>h3 {
+                  &>a {
+                     text-decoration: none;
+                     text-align: center;
+                     font: normal 200 18px Bloverly;
+                     text-transform: uppercase;
+                     cursor: pointer;
+                     color: #afaeae;
+                     position: relative;
+                     top: 2px;
+
+
+
+                     &:hover {
+                        color: #cdcccb;
+                        transition: all .3s linear;
+                     }
+                  }
+               }
+
+               &:hover {
+                  border-color: #c86202;
+                  transition: all .3s linear;
+               }
+            }
+
+         }
+
+         .side-quote li>p {
+            flex-basis: 100%;
+            @include size(110px, 20px);
+            line-height: 1.3em;
+            font-family: sf;
+            text-align: center;
+         }
+
+      }
+   }
+
+   .main-container {
+      @include flex(row wrap, flex-start, 100%, 0.30rem, 0);
+      @include size(100%, 100vh);
+      align-items: center;
+      background: linear-gradient(to top, #83818141, #00000000, #000);
+
+      & > .img-wrapper {
+         flex-basis: 100%;
+         @include size(100%, max-content );
+         height: 70vh;
+         position: absolute;
+         top: 0;
+
+         &>.button-wrapper {
+            flex-basis: 100%;
+            @include flex(row wrap, flex-end, 100%, 0.30rem, 0);
+            box-sizing: border-box;
+            @include size(5%,max-content );
+            float: right;
+            position: relative;
+            z-index: 9999;
+            transform: translate(-10px, 15vh);
+
+
+            &>.menu-box {
+               padding: 1rem 1rem;
+               box-sizing: border-box;
+               position: relative;
+               z-index: 9999;
+
+               .menu-wrapper {
+                  @include flex(column, center, 100%, 0.30rem, 0);
+                  align-items: center;
+                  padding: 0.50rem;
+                  box-sizing: border-box;
+                  cursor: pointer;
+
+                  &>.arrow {
+                     display: block;
+                     @include size(70px, 2px);
+                     background: #d7d4d4;
+                  }
+               }
+
+               &>li {
+                  @include flex(column, flex-end, 100%, 0.30rem, 0);
+                  align-items: flex-end;
+                  padding: 0rem 0rem;
+                  list-style: none;
+
+                  &>p {
+                     flex-basis: 100%;
+                     @include size(110px, 20px);
+                     line-height: 1.3em;
+                     font-size: 13.1px;
+                     font-family: sf;
+                     text-align: center;
+                     color: map-get($Fonts-color, "white");
+                     color: #f2eee7;
+                  }
+
+               }
+
+
+            }
+
+         }
+
+
+
+         &>img {
+            object-fit: cover;
+            object-position: center;
+            @include size(100%, 100%);
+         }
+      }
+
+      .text-wrapper {
+         position: relative;
+         z-index: 999;
+         @include flex(row wrap, center, 100%, 0.30rem, 0);
+         @include size(100%, 75vh);
+         align-items: flex-end;
+
+
+         & > .large-text {
+            .extra-logo {
+                 background: url(./images/plaxe-Extra.png) no-repeat center center / contain border-box;
+                  transform: translate(-8rem, -53rem);
+                  padding: 35.5rem;
+                  position: absolute;
+                  box-sizing: border-box
+
+
+            }
+         }
+
+         .small-text {
+            p {
+               @include size(950px, 100px);
+               line-height: 1.7em;
+               font-family: sf;
+               font-weight: 100;
+               font-size: 13.8px;
+               text-align: start;
+               color: map-get($Fonts-color, "light");
+            }
+            .mobile-text {
+               display: none;
+            }
+         }
+
+      }
+   }
+
+   .rooms-info-container {
+      @include size(100%, max-content);
+      background: map-get($BG-color, "black");
+      position: relative;
+      z-index: 8888;
+
+      & > .rooms-info ul {
+         @include flex(row wrap, space-evenly, 100%, 0.30rem, 0);
+         @include size(100%, 150px );
+         align-items: center;
+         padding: 0;
+         border: 2px solid #616d65;
+         margin: 0;
+         box-sizing: border-box;
+
+         & > li {
+            list-style: none;
+            & > P {
+               font-family: sf;
+               font-weight: 100;
+               font-size: 13.8px;
+               text-align: start;
+               color: map-get($Fonts-color, "light");
+
+               &::after {
+                  content: '';
+                  position: absolute;
+                  transform: translate(13px, -5px);
+                  background: url(./icon/iconmonstr-bed-2-240.png) no-repeat center center / contain border-box;
+                  padding: 0.80rem;
+                  cursor: pointer;
+
+               }
+            }
+         }
+         .sqft {
+            & > P {
+
+               &::after {
+                  content: '';
+                  position: absolute;
+                  transform: translate(13px, -5px);
+                  background: url(./icon/iconmonstr-crop-1-240.png) no-repeat center center / contain border-box;
+                  padding: 0.7rem;
+                  cursor: pointer;
+
+               }
+            }
+         }
+      }
+
+      .amenities {
+         @include flex(row wrap, center, 100%, 0.30rem, 0);
+         & > p {
+            flex-basis: 100%;
+            text-align: center;
+            font-family: sf;
+            font-weight: 100;
+            font-size: 13.5px;
+            color: #616d65;
+            text-align: center;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            cursor: pointer;
+
+            &:hover {
+               color: #b39804;
+               transition: all .3s linear;
+            }
+
+            &::after {
+               content: '';
+               position: absolute;
+               transform: translate(13px, -5px);
+               background: url(./icon/iconmonstr-caret-down-filled-240-grey.png) no-repeat center center / contain border-box;
+               padding: 0.7rem;
+               cursor: pointer;
+
+            }
+         }
+         ul{
+            flex-basis: 100%;
+            @include flex(column wrap, center, 40%, 0.10rem, 0);
+            background: #1c1b1b71;
+            border: 2px solid ghostwhite;
+            padding: 20px;
+            box-sizing: border-box;
+
+            & > li {
+
+               list-style: none;
+               flex-basis: 10%;
+
+               & > P {
+                  font-family: sf;
+                  font-weight: 100;
+                  font-size: 12.3px;
+                  text-align: start;
+                  color: map-get($Fonts-color, "light");
+                  transform: translate(35px,0);
+
+                  &::before {
+                     content: '';
+                     position: absolute;
+                     transform: translate(-35px, -5px);
+                     background: url(./icon/iconmonstr-octagon-lined-240.png) no-repeat center center / contain border-box;
+                     padding: 0.7rem;
+                     cursor: pointer;
+
+                  }
+               }
+            }
+
+         }
+
+         .footer-text {
+            border: 2px solid #121212;
+            background: #b8a306;
+            li > p {
+               color: #242722;
+               &::before {
+                  content: '';
+                  position: absolute;
+                  transform: translate(-100px, -5px);
+                  background: url(./icon/iconmonstr-caret-down-filled-240-grey.png) no-repeat center center / contain border-box;
+                  padding: 0.7rem;
+                  cursor: pointer;
+
+               }
+            }
+
+
+         }
+
+      }
+   }
+
+   .room-image-container {
+      @include size(100%, 100vh);
+      position: relative;
+      z-index: 3333;
+      @include flex(row, flex-start, 100%, 0.10rem, 0);
+
+      & > .col1 {
+         flex-basis: 50%;
+         background: linear-gradient(to top, #83818141, #00000000, #000);
+      }
+      .image {
+         padding: 5px;
+         @include flex(row, center, 75%, 0.10rem, 0);
+         box-sizing: border-box;
+         align-items: center;
+         .room1 {
+            @include size(90%, 90vh);
+            background: darkgreen;
+            box-sizing: border-box;
+
+            &>img {
+               object-fit: cover;
+               object-position: center;
+               @include size(100%, 100%);
+            }
+         }
+      }
+
+      .room-text {
+         flex-basis: 100%;
+         &>p {
+            line-height: 1.3em;
+            font-family: sf;
+            font-size: 13.8px;
+            text-align: center;
+            color: map-get($Fonts-color, "white");
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+
+            &:hover {
+               color: #ac4a03;
+               transition: all .2s linear;
+            }
+         }
+      }
+
+      .image-side {
+         padding: 2rem;
+         @include flex(row wrap, center, 30%, 0.10rem, 0);
+         box-sizing: border-box;
+         .room2 {
+            flex-basis: 100%;
+            @include size(100%, 45vh);
+            box-sizing: border-box;
+
+            &>img {
+
+               object-fit: cover;
+               object-position: center;
+               @include size(100%, 100%);
+
+
+            }
+         }
+         .room3 {
+            flex-basis: 100%;
+            @include size(100%, 40vh);
+            box-sizing: border-box;
+            &>img {
+
+               object-fit: cover;
+               object-position: center;
+               @include size(100%, 100%);
+
+
+            }
+         }
+      }
+
+   }
+   .room-image-container2 {
+      @include size(100%, 100vh);
+      position: relative;
+      z-index: 3333;
+      @include flex(row wrap, flex-start, 100%, 0.10rem, 0);
+
+
+
+      & > .col1 {
+         flex-basis: 100%;
+         background:map-get($BG-color, "black")
+      }
+      .image {
+
+         @include flex(row, center, 100%, 0.10rem, 0);
+         box-sizing: border-box;
+         align-items: center;
+
+
+         .room1 {
+            padding: 15px;
+            @include size(70%, 100vh);
+            background: #1d1e1e;
+            box-sizing: border-box;
+
+            &>img {
+               object-fit: cover;
+               object-position: center;
+               @include size(100%, 100%);
+            }
+         }
+      }
+
+      .room-text {
+         flex-basis: 100%;
+         &>p {
+            line-height: 1.3em;
+            font-family: sf;
+            font-size: 13.8px;
+            text-align: center;
+            color: map-get($Fonts-color, "white");
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+
+            &:hover {
+               color: #ac4a03;
+               transition: all .2s linear;
+            }
+         }
+      }
+
+      .image-side {
+         padding: 1rem;
+         @include size(30%, 50%);
+         box-sizing: border-box;
+         position: absolute;
+         background: #1d1e1e;
+
+         .room2 {
+            flex-basis: 100%;
+            @include size(100%, 45vh);
+            box-sizing: border-box;
+
+            &>img {
+
+               object-fit: cover;
+               object-position: center;
+               @include size(100%, 100%);
+
+
+            }
+         }
+
+      }
+      .room3 {
+         @include size(50%, 45%);
+         padding: 0.10rem;
+         box-sizing: border-box;
+         position: absolute;
+         background: #1d1e1e;
+         transform: translate(45rem, 25rem);
+         &>img {
+
+            object-fit: cover;
+            object-position: center;
+            @include size(100%, 100%);
+
+
+         }
+      }
+
+   }
+   .room-container-text {
+      @include size(100%, 70vh);
+      position: relative;
+      z-index: 3333;
+      @include flex(row wrap, flex-end, 100%, 0.10rem, 0);
+      background: #000000;
+      padding: 0 3rem;
+      box-sizing: border-box;
+
+      .text-wrapper {
+         @include flex(row wrap , flex-end, 100%, 0.10rem, 0);
+         @include size(100%, max-content);
+         padding: 3rem 0;
+         box-sizing: border-box;
+
+
+         &>p {
+            flex-basis: 100%;
+            line-height: 1.3em;
+            font-family: sf;
+            font-size: 13.8px;
+            text-align: right;
+            color: map-get($Fonts-color, "white");
+
+         }
+         &>small {
+            display: block;
+            flex-basis: 100%;
+            line-height: 1.3em;
+            font-family: sf;
+            font-size: 13.8px;
+            text-align: right;
+            color:#AC8F44;
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+
+            &:hover {
+               color: #ac4a03;
+               transition: all .2s linear;
+            }
+         }
+      }
+
+      .middle-text {
+         flex-basis: 100%;
+
+         &>h1 {
+            @include size(1200px,300px );
+            font-size: 3.2rem;
+            font-family: bloverly;
+            font-style: italic;
+            line-height: 1.3em;
+            text-transform: uppercase;
+            color: #b4ac90;
+            font-weight: 100;
+         }
+
+      }
+
+   }
+
+   .room-image-container3 {
+      @include size(100%, max-content);
+      position: relative;
+      z-index: 3333;
+      @include flex(row wrap, flex-start, 100%, 5rem, 0);
+
+
+
+      & > .col1 {
+         flex-basis: 100%;
+         background: #323f3500;
+
+      }
+
+
+      .room-text {
+         flex-basis: 100%;
+         &>p {
+            line-height: 1.3em;
+            font-family: sf;
+            font-size: 13.8px;
+            text-align: center;
+            color: map-get($Fonts-color, "white");
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+
+            &:hover {
+               color: #ac4a03;
+               transition: all .2s linear;
+            }
+         }
+      }
+
+      .image-side {
+         padding: 1rem;
+         @include size(100%, 100%);
+         box-sizing: border-box;
+         border: 2px solid #b9bbbd;
+         .room2 {
+            flex-basis: 100%;
+            @include size(100%, 50vh);
+            box-sizing: border-box;
+            &>img{
+               object-fit: cover;
+               object-position: center;
+               @include size(100%, 100%);
+            }
+         }
+
+      }
+   }
+   .room-image-container4 {
+      @include size(100%, max-content);
+      position: relative;
+      z-index: 3333;
+      @include flex(row wrap, flex-start, 100%, 5rem, 0);
+
+      & > .col1 {
+         flex-basis: 100%;
+         background: #000000;
+      }
+
+      .image {
+         @include flex(row, flex-end, 100%, 0.10rem, 0);
+         box-sizing: border-box;
+         align-items: center;
+         border: 2px solid #bfc1c2;
+         padding: 1rem;
+
+         .room1 {
+            padding: 20px;
+            @include size(100%, 60vh);
+            background: #661e1e00;
+            box-sizing: border-box;
+            border: 1px solid #d2d5d9;
+
+            &>video {
+               // display: none;
+               object-fit: cover;
+               object-position: center;
+               @include size(100%, 100%);
+               // border-radius: 9999px;
+               border: 2px solid #bfc1c2;
+
+            }
+
+         }
+
+         .menu-footer {
+            @include size(100%, max-content);
+            padding: 1rem;
+            box-sizing: border-box;
+
+
+            &>.INFO {
+               margin: 0;
+               @include flex(row wrap, space-evenly, 100%, 0.30rem, 0);
+               @include size(100%, 50px);
+               padding: 0;
+               &>li {
+                  list-style: none;
+                  font: normal 200 14.8px Bloverly;
+                  color: #ea9904;
+                  text-transform: uppercase;
+                  cursor: pointer;
+
+                  &:hover {
+                     color: #b5b3b2;
+                     transition: all .2s linear;
+                     text-decoration: underline 1.6px;
+                     text-underline-offset: 1.6px;
+                  }
+               }
+            }
+            .policy {
+               @include flex(row, center, 100%, 0.30rem, 0);
+               align-items: flex-end;
+               @include size(100%,70px );
+               margin: 0;
+               padding: 0;
+               & > li {
+                  list-style: none;
+                  font: normal 200 12.8px Bloverly;
+                  color: #ea9904;
+                  text-transform: uppercase;
+                  cursor: pointer;
+
+                  &:hover {
+                     color: #b5b3b2;
+                     transition: all .2s linear;
+                     text-decoration: underline 1.6px;
+                     text-underline-offset: 1.6px;
+                  }
+               }
+            }
+         }
+      }
+
+
+      .image-side {
+         padding: 1rem;
+         @include size(100%, 100%);
+         box-sizing: border-box;
+         background: #000000;
+         .room2 {
+            flex-basis: 100%;
+            @include size(100%, 43.6vh);
+            box-sizing: border-box;
+            border-radius: 99999px;
+              @include flex(row wrap, center, 100%, 0.20rem, 0);
+            background: #010163;
+            border: 2px solid #022f72;
+            &>h2{
+               flex-basis: 100%;
+               font-size: 3.2rem;
+               font-family: bloverly;
+               font-style: italic;
+               line-height: 1.3em;
+               text-transform: uppercase;
+               color: #b4ac90;
+               text-align: center;
+               font-weight: 100;
+            }
+
+           .support-footer {
+            flex-basis: 100%;
+            @include flex(row wrap, center, 100%, 4rem, 0);
+            align-items: center;
+
+            &>p {
+               @include size(420px, 150px);
+               line-height: 1.6em;
+               font-family: sf;
+               font-size: 14px;
+               text-align: center;
+               color: map-get($Fonts-color, "white");
+            }
+
+           }
+           .message-button {
+            &>.message {
+               @include size(198px, 45px);
+               @include flex(row, center, 170px, 0.30rem, 0);
+               align-items: center;
+               background: #222221;
+               border: 2px solid #a1a4a7;
+               border-radius: 500px;
+
+
+               &>p {
+                  text-align: center;
+                  font: normal 200 18px Bloverly;
+                  text-transform: uppercase;
+                  cursor: pointer;
+                  color: #afaeae;
+                  position: relative;
+                  top:2px;
+               }
+
+               &:hover {
+                  border: 2px solid #c48507;
+                  transition: all .3s linear;
+               }
+
+               &:hover > p {
+                  color: #ba4f07;
+                  transition: all .3s linear;
+               }
+            }
+           }
+
+         }
+
+      }
+
+
+   }
+}

@@ -42,6 +42,10 @@ $BG-color : ("dim" : #a2895df2,
    scroll-behavior: smooth;
    scroll-snap-type: y mandatory;
 
+   &::-webkit-scrollbar {
+      display: none;
+   }
+
 
    &>.res-wrapper {
       @include size(100%, max-content);
@@ -63,7 +67,7 @@ $BG-color : ("dim" : #a2895df2,
       &>.booking-section {
          @include flex(row wrap, flex-start, 100%, 0.30rem, 0);
          @include size(100%, 100vh);
-         background: linear-gradient(to top, #83818141, #00000000, #000);
+         background: linear-gradient(to top, #c5c3c341, #00000000, #000);
          position: relative;
          z-index: 4444;
 
@@ -71,6 +75,7 @@ $BG-color : ("dim" : #a2895df2,
             flex-basis: 100%;
             position: relative;
             z-index: 4444;
+
 
             &>li {
                @include flex(column, flex-end, 100%, 0.30rem, 0);
@@ -84,6 +89,7 @@ $BG-color : ("dim" : #a2895df2,
                   font-family: sf;
                   text-align: center;
                   color: map-get($Fonts-color, "white");
+                  color: #f2eee7;
                }
 
             }
@@ -102,7 +108,7 @@ $BG-color : ("dim" : #a2895df2,
             &>.arrow {
                display: block;
                @include size(65px, 2px);
-               background: #ffffff;
+               background: #f2eee7;
             }
          }
 
@@ -138,10 +144,11 @@ $BG-color : ("dim" : #a2895df2,
             }
 
             &>.book-now {
-               @include size(150px, 50px);
+               @include size(150px, 42px);
                @include flex(row, center, 170px, 0.30rem, 0);
                align-items: center;
-               background: #3A4D2C;
+               background: #242722;
+               border: 2px solid ghostwhite;
                border-radius: 500px;
 
                &>h3 {
@@ -150,7 +157,21 @@ $BG-color : ("dim" : #a2895df2,
                   text-transform: uppercase;
                   cursor: pointer;
                   color: #afaeae;
+                  position: relative;
+                  top:2px;
+
+                  &:hover {
+                     color: #d1cecd;
+                     transition: all .3s linear;
+                  }
                }
+
+
+               &:hover {
+                  border-color: #c86202;
+                  transition: all .3s linear;
+               }
+
             }
 
          }
@@ -182,7 +203,7 @@ $BG-color : ("dim" : #a2895df2,
    .reservation-section7,
    .reservation-section8{
       @include size(100%, 100vh);
-      background: #201f1f;
+      background: linear-gradient( #050505f3, #050505f3, #050505f3);
       position: relative;
       z-index: 444;
       scroll-snap-align: start;
@@ -243,13 +264,15 @@ $BG-color : ("dim" : #a2895df2,
                position: relative;
                z-index: 77;
 
+
+
                &>p {
                   @include size(350px, 100px);
                   line-height: 1.7em;
                   font-family: sf;
                   font-weight: 100;
-                  font-size: 14.5px;
-                  font-style: italic;
+                  font-size: 14.1px;
+                  font-style: normal;
                   text-align: center;
                   color: map-get($Fonts-color, "white");
 
@@ -266,21 +289,26 @@ $BG-color : ("dim" : #a2895df2,
                position: relative;
                z-index: 77;
 
-               &>p {
-                  line-height: 1.3em;
-                  font-family: sf;
-                  font-size: 13.8px;
-                  text-align: center;
-                  color: map-get($Fonts-color, "white");
-                  cursor: pointer;
-                  text-decoration: underline;
-                  text-underline-offset: 4px;
+               & > a {
+                  text-decoration: none;
+                  &>p {
+                     line-height: 1.3em;
+                     font-family: sf;
+                     font-size: 13.8px;
+                     text-align: center;
+                     color: map-get($Fonts-color, "white");
+                     cursor: pointer;
+                     text-decoration: underline;
+                     text-underline-offset: 4px;
 
-                  &:hover {
-                     color: #ac4a03;
-                     transition: all .2s linear;
+                     &:hover {
+                        color: #ac4a03;
+                        transition: all .2s linear;
+                     }
                   }
                }
+
+
             }
          }
       }
@@ -369,6 +397,7 @@ $BG-color : ("dim" : #a2895df2,
                      font-family: sf;
                      font-size: 14.6px;
                      color: map-get($Fonts-color, "white");
+
                   }
                }
 
@@ -540,6 +569,7 @@ $BG-color : ("dim" : #a2895df2,
             align-items: center;
             flex-basis: 100%;
 
+
             &>.room-info {
                @include flex(row, center, 50%, 0rem, 0);
                align-items: center;
@@ -614,6 +644,7 @@ $BG-color : ("dim" : #a2895df2,
                padding: 1rem;
                box-sizing: border-box;
 
+
                &>.INFO {
                   margin: 0;
                   @include flex(column, space-evenly, 30%, 1.1rem, 0);
@@ -627,6 +658,7 @@ $BG-color : ("dim" : #a2895df2,
                      text-transform: uppercase;
                      cursor: pointer;
                      font-weight: 100;
+
 
                      &:hover {
                         color: #edeceb;
@@ -676,6 +708,7 @@ $BG-color : ("dim" : #a2895df2,
                      font-family: sf;
                      font-size: 14.6px;
                      color: map-get($Fonts-color, "white");
+
                   }
 
                   .book {
@@ -808,11 +841,12 @@ $BG-color : ("dim" : #a2895df2,
                   &>li {
                      list-style: none;
                      font-family: Bloverly;
-                     font-size: 14px;
+                     font-size: 13.3px;
                      color: map-get($Fonts-color, "white");
                      text-transform: uppercase;
                      cursor: pointer;
                      font-weight: 100;
+
 
                      &:hover {
                         color: #edeceb;
@@ -833,7 +867,7 @@ $BG-color : ("dim" : #a2895df2,
                   &>li {
                      list-style: none;
                      font-family: Bloverly;
-                     font-size: 13.2px;
+                     font-size: 12px;
                      color: map-get($Fonts-color, "white");
                      text-transform: uppercase;
                      text-transform: uppercase;

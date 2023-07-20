@@ -1,16 +1,16 @@
 $Fonts-color : ("dim" : #C7C3C3,
-   "white" : #b5b3b2,
+   "white" : #cecbca,
    "light" : #1d1d1d,
    "grey" : #383838,
    "red" : #d1cfc6,
-   "black" : #191816,
+   "black" : #8d6008,
    "footer" : #db9405);
 $BG-color : ("dim" : #a2895df2,
    "black" : #0e100f,
    "frame" : #191818,
    "nav" : #a22401,
    "white" : #cec6c6,
-   "bright" : #967440,
+   "bright" : #13110f,
    "light" : #c3c2c2,
    "radial" : #c06a01,
    "empty" : #ffffff00,
@@ -42,7 +42,9 @@ $BG-color : ("dim" : #a2895df2,
    overflow-x: hidden;
    overflow-y: auto;
    scroll-behavior: smooth;
-
+   position: fixed;
+   z-index: 888888;
+   top: 0;
 
 
    &::-webkit-scrollbar {
@@ -70,7 +72,7 @@ $BG-color : ("dim" : #a2895df2,
             &>.exit {
                display: block;
                @include size(60px, 2.5px);
-               background: #212121;
+               background: #908e8c;
             }
 
             .left {
@@ -82,13 +84,13 @@ $BG-color : ("dim" : #a2895df2,
             }
 
             &:hover > .exit {
-               background: #6b2102;
+               background: #8d6008;
                transition: all .3s linear;
             }
          }
 
          .plaxe-logo {
-            background: url(./images/plaxe-blackLogo.png) no-repeat center center / contain border-box;
+            background: url(./images/PLAXE-LOGO.png) no-repeat center center / contain border-box;
             transform: translate(0, -70px);
             padding: 2.5rem;
             box-sizing: border-box;
@@ -97,24 +99,30 @@ $BG-color : ("dim" : #a2895df2,
 
       .menu-nav {
          @include size(100%, max-content);
-         padding: 7rem;
+         padding: 2rem;
          flex-basis: 100%;
          box-sizing: border-box;
          background: map-get($BG-color, "bright");
 
-         &>h1 {
-            margin: 0;
-            font: normal 200 3.5rem bloverly;
-            cursor: pointer;
-            padding: 15px;
-            color: map-get($Fonts-color, "white");
+         & > a {
+            text-decoration: none;
+            &>span {
+               display: block;
+               margin: 0;
+               font: normal 200 3.5rem bloverly;
+               cursor: pointer;
+               padding: 15px;
+               color: map-get($Fonts-color, "white");
 
-            &:hover {
-               color: #272625;
-               transition: all .3s linear;
+               &:hover {
+                  color: #8d6008;
+                  transition: all .3s linear;
+               }
+
             }
-
          }
+
+
       }
 
       .menu-footer {
@@ -122,13 +130,15 @@ $BG-color : ("dim" : #a2895df2,
          padding: 1rem;
          box-sizing: border-box;
 
+
          &>.INFO {
             margin: 0;
             @include flex(row, space-evenly, 100%, 0.30rem, 0);
             @include size(100%, 50px);
+            padding: 0;
             &>li {
                list-style: none;
-               font: normal 200 14.8px Bloverly;
+               font: normal 200 13.2px Bloverly;
                color: map-get($Fonts-color, "black");
                text-transform: uppercase;
                cursor: pointer;
@@ -146,6 +156,7 @@ $BG-color : ("dim" : #a2895df2,
             align-items: flex-end;
             @include size(100%,70px );
             margin: 0;
+            padding: 0;
             & > li {
                list-style: none;
                font: normal 200 13.3px Bloverly;

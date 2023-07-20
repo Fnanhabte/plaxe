@@ -1,9 +1,14 @@
 import React from 'react'
+import {Link} from "react-router-dom"
+import Rooms from "./Rooms"
+import FoodNdrink from './FoodNdrink'
+import Reservation from "./Reservation"
+import Home from "./Home"
+import Activity from './Activity'
+import Cameraroll from './Cameraroll'
 
 export default function
    Navigation({ isOpen, toggleMenu }) {
-
-
 
    return (
       <div className={isOpen ? "show" : 'menu-dropdown'}>
@@ -20,11 +25,12 @@ export default function
                </div>
             </div>
             <div className="menu-nav">
-               <h1>Our Rooms</h1>
-               <h1>Eat and Drink</h1>
-               <h1>The Neighbourhood</h1>
-               <h1>Events</h1>
-               <h1>Camera Rolls</h1>
+            <Link to="/plaxe" element={<Home />}><span>Home</span></Link>
+            <Link to="/reservation" element={<Reservation />}> <span>Book Now</span></Link>
+            <Link to="/rooms" element={<Rooms />}><span>Our Rooms</span></Link>
+            <Link to="/eat-and-drink" element={<FoodNdrink />}> <span>Eat and Drink</span></Link>
+            <Link to="/plaxe-events" element={<Activity />}> <span>Events</span></Link>
+            <Link to="/camera-roll" element={<Cameraroll />}> <span>Camera Rolls</span></Link>
             </div>
             <div className="menu-footer">
                <ul className='INFO'>

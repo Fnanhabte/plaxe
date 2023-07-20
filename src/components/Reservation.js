@@ -21,10 +21,23 @@ import cafe3 from "../images/plaxe-cafe5.jpeg"
 import cafe4 from "../images/plaxe-cafe8.jpg"
 import vecation from "../images/plaxe-vaction.mp4"
 import plaxeView from "../images/plaxe-outside.jpg"
+import { Link } from 'react-router-dom'
+import Rooms from './Rooms'
+import { useState } from 'react'
+import Navigation from './Navigation'
+import FoodNdrink from './FoodNdrink'
 
 
 export default function Reservation() {
+
+  const [isOpen, setIsOpen] = useState(false)
+  const toggleMenu = () => {
+     setIsOpen(isOpen => !isOpen);
+  }
+
+
   return (
+
     <div className='reservation'>
       <div className="res-wrapper">
         <img src={plaxeView} alt="Plaxe" />
@@ -35,7 +48,7 @@ export default function Reservation() {
               <div className="selector">
                 Location
               </div>
-              <small>Ethiopia</small>
+              <small>Select</small>
             </li>
             <li>
               <div className="selector">
@@ -61,18 +74,19 @@ export default function Reservation() {
               </div>
             </li>
           </ul>
-          <ul className='res-menu'>
-            <div className="menu-bar">
+          <ul className='res-menu' >
+            <div className="menu-bar" onClick={toggleMenu}>
               <span className="arrow"></span>
               <span className="arrow"></span>
               <span className="arrow"></span>
             </div>
             <li>
-              <p>Summer Destination</p>
+              <p>Menu</p>
             </li>
           </ul>
         </div>
       </div>
+      <Navigation isOpen={isOpen} toggleMenu={toggleMenu} />
       <div className="reservation-section2">
         <div className="section2-wrapper">
           <div className="image-container">
@@ -94,13 +108,16 @@ export default function Reservation() {
           </div>
           <div className="info-container">
             <div className="room-info">
-              <p>A warm and authentic Ethiopia experience while enjoying comfort that makes a house a home. See the city from a different angle
+              <p>A warm and authentic Plaxe experience while enjoying comfort that makes a house a home. See the city from a different angle
                 – from the inside.</p>
             </div>
             <div className="view-all">
-              <p>
+            <Link to="/rooms" element={<Rooms />}>
+            <p>
                 All Rooms
               </p>
+            </Link>
+
             </div>
           </div>
 
@@ -113,9 +130,11 @@ export default function Reservation() {
               <p>The Wine Bar is a cozy, intimate room that warmly invites you in for a drink and great conversation. Take your jacket off and stay a while.</p>
             </div>
             <div className="view-all">
-              <p>
+            <Link to="/eat-and-drink" element={<FoodNdrink />}>
+            <p>
                 Discover
               </p>
+            </Link>
             </div>
           </div>
           <div className="image-container">
@@ -152,15 +171,17 @@ export default function Reservation() {
 
           <div className="info-container">
             <div className="room-info">
-              <p className='coffee'>Experience the captivating aroma and flavors of freshly brewed Ethiopian coffee in our cozy, elegant rooms. Each morning, wake up to the invigorating scent of coffee beans, handpicked from Ethiopia's lush highlands. Our skilled baristas will ensure that your cup is crafted to perfection, allowing you to savor the authentic taste of this renowned coffee.</p>
+              <p className='coffee'> Experience the captivating aroma and flavors of freshly brewed Ethiopian coffee in our cozy, elegant rooms. Each morning, wake up to the invigorating scent of coffee beans, handpicked from Ethiopia's lush highlands.</p>
               <p className='mobile-coffe'>
               Experience the captivating aroma and flavors of freshly brewed Ethiopian coffee in our cozy, elegant rooms. Each morning, wake up to the invigorating scent of coffee beans, handpicked from Ethiopia's lush highlands.
               </p>
             </div>
             <div className="view-all">
-              <p className='discover-coffee'>
+            <Link to="/eat-and-drink" element={<FoodNdrink />}>
+            <p>
                 Discover
               </p>
+            </Link>
             </div>
           </div>
 
@@ -184,29 +205,7 @@ export default function Reservation() {
                 </p>
               </div>
             </div>
-            <div className="alcemy-container">
-              <div className="col2">
-                <video
-                  src={vecation}
-                  autoPlay
-                  muted
-                  loop
-                  preload="auto"
-                  playsInline
-                >
-                </video>
-              </div>
-
-
-            </div>
-            <div className="alcemy-text-footer">
-              <div className="text-wrapper">
-                <p>
-                  Secluded from sight and immersed in nature, Plaxe sanctuaries provide the ultimate group refuge. Lazy moments with little ones under the palms. Lapping up the waves together at sunset. Sounds of laughter around the dinner table. The feelings of joy and closeness are sentiments celebrated in all the exceptional environments Plaxe calls home.
-                </p>
-              </div>
-            </div>
-
+          
           </div>
 
         </div>
@@ -233,9 +232,7 @@ export default function Reservation() {
             </div>
             <div className="alcemy-text-footer">
               <div className="text-wrapper">
-                <p>
-                  Secluded from sight and immersed in nature, Plaxe sanctuaries provide the ultimate group refuge. Lazy moments with little ones under the palms. Lapping up the waves together at sunset. Sounds of laughter around the dinner table. The feelings of joy and closeness are sentiments celebrated in all the exceptional environments Plaxe calls home.
-                </p>
+
               </div>
             </div>
 

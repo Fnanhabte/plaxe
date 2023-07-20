@@ -8,10 +8,11 @@ import resturant from "../images/plaxe-restaurants.jpg"
 import pool from "../images/plaxe-pool.jpg"
 import floors from "../images/plaxe-floors.jpg"
 import frontdesk from "../images/plaxe-frontdesk.jpg"
-import Menu from './Navigation'
+import Navigation from './Navigation'
 import { useState } from 'react'
 import { Link } from "react-router-dom"
 import Reservation from './Reservation'
+
 
 export default function Interface() {
    const [isOpen, setIsOpen] = useState(false)
@@ -21,7 +22,7 @@ export default function Interface() {
 
    return (
       <div className='interface'>
-         <Menu isOpen={isOpen} toggleMenu={toggleMenu} />
+         <Navigation isOpen={isOpen} toggleMenu={toggleMenu} />
          <div className="intreface-container">
 
             <div className="col1 frame1">
